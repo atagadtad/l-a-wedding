@@ -13,7 +13,7 @@ import TravelStay from './views/TravelStay/TravelStay';
 export default function App() {
   return (
     <Router>
-      <div>
+      <div> 
         <nav>
           <ul>
             <li>
@@ -23,10 +23,10 @@ export default function App() {
               <Link to="/our-story">Our Story</Link>
             </li>
             <li>
-  <Link to="/travel-stay">{'Travel & Stay'}</Link>
+              <Link to="/travel-stay">{'Travel & Stay'}</Link>
             </li>
             <li>
-  <Link to="/rsvp">RSVP</Link>
+              <Link to="/rsvp">RSVP</Link>
             </li>
           </ul>
         </nav>

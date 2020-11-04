@@ -2,8 +2,9 @@ import React from "react";
 
 const Home = () => {
     return (
-        <div div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <h1>HOME</h1>
+        <div 
+        >
+            <h1 className="text-gray-700 bg-gray-400 flex justify-center items-center px-4 py-2">HOME</h1>
         </div>
     )
 }

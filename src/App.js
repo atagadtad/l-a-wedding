@@ -13,7 +13,7 @@ import TravelStay from './views/TravelStay/TravelStay';
 export default function App() {
   return (
     <Router>
-      <div> 
+      <div className="sm:container justify-items-center"> 
         <nav>
           <ul>
             <li>

@@ -11,43 +11,14 @@ export default function App() {
   return (
     <Router>
       <div className="container">
+        <div className="absolute left-0 p-6 block lg:hidden">
+          <h1 className={`${showMenu && "text-white"}`}>{"Lelaine & Aaron"}</h1>
+        </div>
         <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
         {showMenu ? (
-          <nav>
-            <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
-            <ul className="h-screen flex items-center bg-teal-500 p-6">
-              <div className="container h-64">
-                <li
-                  onClick={() => setShowMenu(false)}
-                  className="flex justify-center"
-                >
-                  <Link to="/">Home</Link>
-                </li>
-                <li
-                  onClick={() => setShowMenu(false)}
-                  className="flex justify-center"
-                >
-                  <Link to="/our-story">Our Story</Link>
-                </li>
-                <li
-                  onClick={() => setShowMenu(false)}
-                  className="flex justify-center"
-                >
-                  <Link to="/travel-stay">{"Travel & Stay"}</Link>
-                </li>
-                <li
-                  onClick={() => setShowMenu(false)}
-                  className="flex justify-center"
-                >
-                  <Link to="/rsvp">RSVP</Link>
-                </li>
-              </div>
-            </ul>
-          </nav>
+          <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
         ) : (
           <>
-            {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
             <Switch>
               <Route path="/our-story">
                 <OurStory />
@@ -86,5 +57,41 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
         </svg>
       </button>
     </div>
+  );
+};
+
+const Menu = ({ showMenu, setShowMenu }) => {
+  return (
+    <nav>
+      <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
+      <ul className="h-screen flex items-center bg-teal-500 p-6">
+        <div className="container h-64">
+          <li
+            onClick={() => setShowMenu(false)}
+            className="flex justify-center"
+          >
+            <Link to="/">Home</Link>
+          </li>
+          <li
+            onClick={() => setShowMenu(false)}
+            className="flex justify-center"
+          >
+            <Link to="/our-story">Our Story</Link>
+          </li>
+          <li
+            onClick={() => setShowMenu(false)}
+            className="flex justify-center"
+          >
+            <Link to="/travel-stay">{"Travel & Stay"}</Link>
+          </li>
+          <li
+            onClick={() => setShowMenu(false)}
+            className="flex justify-center"
+          >
+            <Link to="/rsvp">RSVP</Link>
+          </li>
+        </div>
+      </ul>
+    </nav>
   );
 };

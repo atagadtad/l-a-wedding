@@ -10,23 +10,35 @@ export default function App() {
 
   return (
     <Router>
-      <div>
+      <div className="container">
         <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
         {showMenu ? (
           <nav>
             <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
             <ul className="h-screen flex items-center bg-teal-500 p-6">
               <div className="container h-64">
-                <li className="flex justify-center">
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className="flex justify-center"
+                >
                   <Link to="/">Home</Link>
                 </li>
-                <li className="flex justify-center">
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className="flex justify-center"
+                >
                   <Link to="/our-story">Our Story</Link>
                 </li>
-                <li className="flex justify-center">
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className="flex justify-center"
+                >
                   <Link to="/travel-stay">{"Travel & Stay"}</Link>
                 </li>
-                <li className="flex justify-center">
+                <li
+                  onClick={() => setShowMenu(false)}
+                  className="flex justify-center"
+                >
                   <Link to="/rsvp">RSVP</Link>
                 </li>
               </div>

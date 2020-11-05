@@ -1,33 +1,42 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import Home from './views/Home/Home'
-import OurStory from './views/OurStory/OurStory';
-import RSVP from './views/RSVP/RSVP';
-import TravelStay from './views/TravelStay/TravelStay';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./views/Home/Home";
+import OurStory from "./views/OurStory/OurStory";
+import RSVP from "./views/RSVP/RSVP";
+import TravelStay from "./views/TravelStay/TravelStay";
 
 export default function App() {
   return (
     <Router>
-      <div className="sm:flex  justify-items-center"> 
+      <div>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/our-story">Our Story</Link>
-            </li>
-            <li>
-              <Link to="/travel-stay">{'Travel & Stay'}</Link>
-            </li>
-            <li>
-              <Link to="/rsvp">RSVP</Link>
-            </li>
+          <div className="absolute right-0 p-6 block lg:hidden">
+            <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+              <svg
+                className="fill-current h-3 w-3"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Menu</title>
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              </svg>
+            </button>
+          </div>
+          <ul className="h-screen flex items-center bg-teal-500 p-6">
+            <div className="container h-64">
+              <li className="flex justify-center">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="flex justify-center">
+                <Link to="/our-story">Our Story</Link>
+              </li>
+              <li className="flex justify-center">
+                <Link to="/travel-stay">{"Travel & Stay"}</Link>
+              </li>
+              <li className="flex justify-center">
+                <Link to="/rsvp">RSVP</Link>
+              </li>
+            </div>
           </ul>
         </nav>
 
@@ -40,7 +49,7 @@ export default function App() {
           <Route path="/travel-stay">
             <TravelStay />
           </Route>
-          <Route path="/rsvp"> 
+          <Route path="/rsvp">
             <RSVP />
           </Route>
           <Route path="/">

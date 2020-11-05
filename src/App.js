@@ -11,7 +11,10 @@ export default function App() {
   return (
     <Router>
       <div className="container">
-        <div className="absolute left-0 p-6 block lg:hidden">
+        <div
+          onClick={() => showMenu && setShowMenu(false)}
+          className="absolute left-0 p-6 block lg:hidden"
+        >
           <Link
             to="/"
             className={`${

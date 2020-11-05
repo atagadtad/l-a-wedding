@@ -12,7 +12,14 @@ export default function App() {
     <Router>
       <div className="container">
         <div className="absolute left-0 p-6 block lg:hidden">
-          <h1 className={`${showMenu && "text-white"}`}>{"Lelaine & Aaron"}</h1>
+          <Link
+            to="/"
+            className={`${
+              showMenu && "text-white text-3xl font-semibold"
+            } text-3xl select-none font-bold`}
+          >
+            {showMenu ? "Lelaine & Aaron" : "L & A"}
+          </Link>
         </div>
         <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
         {showMenu ? (
@@ -68,25 +75,25 @@ const Menu = ({ showMenu, setShowMenu }) => {
         <div className="container h-64">
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center"
+            className="flex justify-center text-white text-2xl"
           >
             <Link to="/">Home</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center"
+            className="flex justify-center text-2xl"
           >
             <Link to="/our-story">Our Story</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center"
+            className="flex justify-center text-2xl"
           >
             <Link to="/travel-stay">{"Travel & Stay"}</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center"
+            className="flex justify-center text-2xl"
           >
             <Link to="/rsvp">RSVP</Link>
           </li>

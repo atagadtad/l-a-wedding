@@ -1,5 +1,12 @@
 import React, { useState, useContext } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+  useHistory,
+} from "react-router-dom";
 
 // Custom Components
 import Home from "./views/Home/Home";
@@ -84,48 +91,71 @@ function PrivateRoute({ children, ...rest }) {
   );
 }
 
+function AuthButton() {
+  const history = useHistory();
+  const auth = useAuth();
+  console.log({ auth });
+  return auth.user ? (
+    <p>
+      Welcome!{" "}
+      <button
+        onClick={() => {
+          auth.signout(() => history.push("/"));
+        }}
+      >
+        Sign out
+      </button>
+    </p>
+  ) : (
+    <p>You are not logged in.</p>
+  );
+}
+
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <Router>
-      <div className="container">
-        <div
-          onClick={() => showMenu && setShowMenu(false)}
-          className="absolute left-0 p-6 block lg:hidden"
-        >
-          <Link
-            to="/"
-            className={`${
-              showMenu && "text-white text-3xl font-semibold"
-            } text-3xl select-none font-bold`}
+    <ProvideAuth>
+      <Router>
+        <div className="container">
+          <div
+            onClick={() => showMenu && setShowMenu(false)}
+            className="absolute left-0 p-6 block lg:hidden"
           >
-            {showMenu ? "Lelaine & Aaron" : "L & A"}
-          </Link>
+            <Link
+              to="/"
+              className={`${
+                showMenu && "text-white text-3xl font-semibold"
+              } text-3xl select-none font-bold`}
+            >
+              {showMenu ? "Lelaine & Aaron" : "L & A"}
+            </Link>
+          </div>
+          <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
+          {showMenu ? (
+            <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
+          ) : (
+            <>
+              <AuthButton />
+              <Switch>
+                <Route path="/our-story">
+                  <OurStory />
+                </Route>
+                <Route path="/travel-stay">
+                  <TravelStay />
+                </Route>
+                <Route path="/rsvp">
+                  <RSVP />
+                </Route>
+                <Route path="/">
+                  <Home />
+                </Route>
+              </Switch>
+            </>
+          )}
         </div>
-        <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
-        {showMenu ? (
-          <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
-        ) : (
-          <>
-            <Switch>
-              <Route path="/our-story">
-                <OurStory />
-              </Route>
-              <Route path="/travel-stay">
-                <TravelStay />
-              </Route>
-              <Route path="/rsvp">
-                <RSVP />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </>
-        )}
-      </div>
-    </Router>
+      </Router>
+    </ProvideAuth>
   );
 }
 

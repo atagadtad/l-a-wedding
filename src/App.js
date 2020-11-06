@@ -1,10 +1,15 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+// Custom Components
 import Home from "./views/Home/Home";
 import OurStory from "./views/OurStory/OurStory";
 import RSVP from "./views/RSVP/RSVP";
 import TravelStay from "./views/TravelStay/TravelStay";
 import Login from "./views/Login/Login";
+
+// Contexts
+import authContext from "./contexts/AuthContext";
 
 /** AUTH hooks **/
 const fakeAuth = {
@@ -19,7 +24,7 @@ const fakeAuth = {
   },
 };
 
-const authContext = createContext();
+// const authContext = createContext();
 
 function useProvideAuth() {
   const [user, setUser] = useState(null);

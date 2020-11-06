@@ -5,6 +5,43 @@ import OurStory from "./views/OurStory/OurStory";
 import RSVP from "./views/RSVP/RSVP";
 import TravelStay from "./views/TravelStay/TravelStay";
 
+const AuthContext = createContext();
+
+function ProvideAuth({ children }) {
+  const auth = useProvideAuth();
+  return <AuthContext.Provider value={auth}>{children}</AuthContext.Provider>;
+}
+
+function useAuth() {
+  return useContext(authContext);
+}
+
+function useProvideAuth() {
+  const [user, setUser] = useState(null);
+
+  const signin = (cb) => {
+    return fakeAuth.signin(() => {
+      setUser("user");
+      cb();
+    });
+  };
+
+  const signout = (cb) => {
+    return fakeAuth.signout(() => {
+      setUser(null);
+      cb();
+    });
+  };
+
+  return {
+    user,
+    signin,
+    signout,
+  };
+}
+
+/*** */
+
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
 

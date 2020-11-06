@@ -4,18 +4,22 @@ import Home from "./views/Home/Home";
 import OurStory from "./views/OurStory/OurStory";
 import RSVP from "./views/RSVP/RSVP";
 import TravelStay from "./views/TravelStay/TravelStay";
+import Login from "./views/Login/Login";
 
 /** AUTH hooks **/
+const fakeAuth = {
+  isAuthenticated: false,
+  signin(cb) {
+    fakeAuth.isAuthenticated = true;
+    setTimeout(cb, 100); // fake async
+  },
+  signout(cb) {
+    fakeAuth.isAuthenticated = false;
+    setTimeout(cb, 100);
+  },
+};
+
 const authContext = createContext();
-
-function ProvideAuth({ children }) {
-  const auth = useProvideAuth();
-  return <authContext.Provider value={auth}>{children}</authContext.Provider>;
-}
-
-function useAuth() {
-  return useContext(authContext);
-}
 
 function useProvideAuth() {
   const [user, setUser] = useState(null);
@@ -41,7 +45,39 @@ function useProvideAuth() {
   };
 }
 
+function ProvideAuth({ children }) {
+  const auth = useProvideAuth();
+  return <authContext.Provider value={auth}>{children}</authContext.Provider>;
+}
+
+function useAuth() {
+  return useContext(authContext);
+}
+
 /** END AUTH hooks **/
+
+// A wrapper for <Route> that redirects to the login
+// screen if you're not yet authenticated.
+function PrivateRoute({ children, ...rest }) {
+  const auth = useAuth();
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        auth.user ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
+}
 
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);

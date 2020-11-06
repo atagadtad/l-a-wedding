@@ -94,13 +94,16 @@ function PrivateRoute({ children, ...rest }) {
 function AuthButton() {
   const history = useHistory();
   const auth = useAuth();
-  console.log({ auth });
   return auth.user ? (
     <p>
       Welcome!{" "}
       <button
+        className="bg-red-600"
         onClick={() => {
-          auth.signout(() => history.push("/"));
+          auth.signout(() => {
+            console.log("signed out!");
+            history.push("/");
+          });
         }}
       >
         Sign out
@@ -138,15 +141,19 @@ export default function App() {
             <>
               <AuthButton />
               <Switch>
+                <Route path="/login">
+                  <Login />
+                </Route>
                 <Route path="/our-story">
                   <OurStory />
                 </Route>
                 <Route path="/travel-stay">
                   <TravelStay />
                 </Route>
-                <Route path="/rsvp">
+
+                <PrivateRoute path="/rsvp">
                   <RSVP />
-                </Route>
+                </PrivateRoute>
                 <Route path="/">
                   <Home />
                 </Route>

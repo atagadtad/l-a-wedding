@@ -1,9 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, createContext, useContext } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./views/Home/Home";
 import OurStory from "./views/OurStory/OurStory";
 import RSVP from "./views/RSVP/RSVP";
 import TravelStay from "./views/TravelStay/TravelStay";
+
+/** AUTH hooks **/
+const authContext = createContext();
+
+function ProvideAuth({ children }) {
+  const auth = useProvideAuth();
+  return <authContext.Provider value={auth}>{children}</authContext.Provider>;
+}
+
+function useAuth() {
+  return useContext(authContext);
+}
+
+function useProvideAuth() {
+  const [user, setUser] = useState(null);
+
+  const signin = (cb) => {
+    return fakeAuth.signin(() => {
+      setUser("user");
+      cb();
+    });
+  };
+
+  const signout = (cb) => {
+    return fakeAuth.signout(() => {
+      setUser(null);
+      cb();
+    });
+  };
+
+  return {
+    user,
+    signin,
+    signout,
+  };
+}
+
+/** END AUTH hooks **/
 
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);

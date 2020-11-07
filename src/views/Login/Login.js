@@ -57,7 +57,7 @@ const Login = () => {
         <input
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          class="bg-white mt-2 focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          class="bg-white mt-4 focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="email"
         />
         <div class="flex justify-center">

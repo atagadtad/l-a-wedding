@@ -5,7 +5,7 @@ import {
   Route,
   Link,
   Redirect,
-  useHistory,
+  // useHistory,
 } from "react-router-dom";
 
 // Custom Components
@@ -91,32 +91,31 @@ function PrivateRoute({ children, ...rest }) {
   );
 }
 
-function AuthButton() {
-  const history = useHistory();
-  const auth = useAuth();
-  return (
-    auth.user && (
-      <p>
-        Welcome!{" "}
-        <button
-          className="bg-red-600"
-          onClick={() => {
-            auth.signout(() => {
-              console.log("signed out!");
-              history.push("/");
-            });
-          }}
-        >
-          Sign out
-        </button>
-      </p>
-    )
-  );
-}
+// function AuthButton() {
+//   const history = useHistory();
+//   const auth = useAuth();
+//   return (
+//     auth.user && (
+//       <p>
+//         Welcome!{" "}
+//         <button
+//           className="bg-red-600"
+//           onClick={() => {
+//             auth.signout(() => {
+//               console.log("signed out!");
+//               history.push("/");
+//             });
+//           }}
+//         >
+//           Sign out
+//         </button>
+//       </p>
+//     )
+//   );
+// }
 
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
-  const auth = useAuth();
 
   return (
     <ProvideAuth>

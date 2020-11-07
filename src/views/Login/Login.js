@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import {
+  useHistory,
+  // useLocation
+} from "react-router-dom";
 import { LOGIN } from "../../api/Endpoints";
 import useAuth from "../../hooks/useAuth";
 import { parseResponse, handleResponse } from "../../helpers/HelperFunctions";
 
 const Login = () => {
   const history = useHistory();
-  const location = useLocation();
+  // const location = useLocation();
   const auth = useAuth();
-  const { from } = location.state || { from: { pathname: "/" } };
+  // const { from } = location.state || { from: { pathname: "/" } };
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

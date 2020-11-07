@@ -144,19 +144,19 @@ export default function App() {
                 <Route path="/login">
                   <Login />
                 </Route>
-                <Route path="/our-story">
+                <PrivateRoute path="/our-story">
                   <OurStory />
-                </Route>
-                <Route path="/travel-stay">
+                </PrivateRoute>
+                <PrivateRoute path="/travel-stay">
                   <TravelStay />
-                </Route>
+                </PrivateRoute>
 
                 <PrivateRoute path="/rsvp">
                   <RSVP />
                 </PrivateRoute>
-                <Route path="/">
+                <PrivateRoute path="/">
                   <Home />
-                </Route>
+                </PrivateRoute>
               </Switch>
             </>
           )}

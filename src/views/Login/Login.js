@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory, useLocation } from "react-router-dom";
+import { LOGIN } from "../../api/Endpoints";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
@@ -9,9 +10,46 @@ const Login = () => {
 
   const { from } = location.state || { from: { pathname: "/" } };
   const login = () => {
-    auth.signin(() => {
-      history.replace(from);
-    });
+    fetch(LOGIN, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        // email: "",
+        // password: "",
+      }),
+    })
+      .then((response) => {
+        const { status, statusText } = response;
+        const data = response.json();
+        return Promise.all([status, statusText, data])
+          .then((res) => {
+            const [status, statusText, data] = res;
+            return { status, statusText, data };
+          })
+          .catch((err) => {
+            return { status: undefined, data: err };
+          });
+      })
+      .then((result) => {
+        const { status, statusText, data } = result;
+        const { message } = data;
+        console.log({ result });
+        if (status === 200 || status === 201) {
+          auth.signin(() => {
+            history.replace(from);
+          });
+        } else if (status === 401) {
+          alert("Invalid token!");
+        } else if (status >= 402 && status <= 499) {
+          alert(`${statusText}. ${message} Error code: ${status}`);
+        } else {
+          alert("Server error.");
+        }
+      })
+      .catch((err) => console.log({ err }));
   };
 
   return (

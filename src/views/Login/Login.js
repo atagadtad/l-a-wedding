@@ -42,7 +42,8 @@ const Login = () => {
         console.log({ result });
         if (status === 200 || status === 201) {
           auth.signin(() => {
-            history.replace(from);
+            history.push("/");
+            // history.replace(from);
           });
         } else if (status === 401) {
           alert("Invalid token!");
@@ -58,10 +59,7 @@ const Login = () => {
   return (
     <div className="container h-screen  bg-teal-500">
       <div className="pt-16">
-        <h1
-          onClick={login}
-          className="text-gray-300 flex justify-center items-center px-4 py-2 text-6xl font-semibold"
-        >
+        <h1 className="text-gray-300 flex justify-center items-center px-4 py-2 text-6xl font-semibold">
           {"Login"}
         </h1>
         <p>You must log in to view the page at {from.pathname}</p>
@@ -70,6 +68,9 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="password"
         />
+        <button className="bg-red-400 rounded-sm px-2 py-3" onClick={login}>
+          Login
+        </button>
       </div>
     </div>
   );

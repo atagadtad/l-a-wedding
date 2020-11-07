@@ -175,7 +175,7 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
         className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
       >
         <svg
-          className="fill-current h-3 w-3"
+          className="fill-current h-4 w-4"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
         >

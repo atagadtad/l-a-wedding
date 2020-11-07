@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { LOGIN } from "../../api/Endpoints";
 import useAuth from "../../hooks/useAuth";
+import { parseResponse, handleResponse } from "../../helpers/HelperFunctions";
 
 const Login = () => {
   const history = useHistory();
@@ -24,34 +25,14 @@ const Login = () => {
         password,
       }),
     })
-      .then((response) => {
-        const { status, statusText } = response;
-        const data = response.json();
-        return Promise.all([status, statusText, data])
-          .then((res) => {
-            const [status, statusText, data] = res;
-            return { status, statusText, data };
-          })
-          .catch((err) => {
-            return { status: undefined, data: err };
-          });
-      })
+      .then((response) => parseResponse(response))
       .then((result) => {
-        const { status, statusText, data } = result;
-        const { message } = data;
-        console.log({ result });
-        if (status === 200 || status === 201) {
+        // console.log({ result });
+        handleResponse(result, () => {
           auth.signin(() => {
             history.push("/");
-            // history.replace(from);
           });
-        } else if (status === 401) {
-          alert("Invalid token!");
-        } else if (status >= 402 && status <= 499) {
-          alert(`${statusText}. ${message && message} Error code: ${status}`);
-        } else {
-          alert("Server error.");
-        }
+        });
       })
       .catch((err) => console.log({ err }));
   };

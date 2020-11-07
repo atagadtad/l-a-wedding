@@ -41,7 +41,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container h-screen p-6  bg-teal-500">
+    <div className="container h-screen p-6  bg-green-700">
       <div className="pt-16">
         <h1 className="text-gray-300 flex justify-center items-center px-4 py-2 text-6xl font-semibold">
           {"Login"}
@@ -63,7 +63,7 @@ const Login = () => {
         <div class="flex justify-center">
           <button
             onClick={login}
-            class="bg-blue-500 mt-3  focus:outline-none hover:bg-blue-700 text-white font-bold py-2 px-4 tracking-wider rounded-md"
+            class="bg-green-500 mt-3  focus:outline-none hover:bg-blue-700 text-white font-bold py-2 px-4 tracking-wider rounded-md"
           >
             Login
           </button>

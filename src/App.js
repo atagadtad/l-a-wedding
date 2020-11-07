@@ -191,7 +191,7 @@ const Menu = ({ showMenu, setShowMenu }) => {
   return (
     <nav>
       <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
-      <ul className="h-screen flex items-center bg-teal-500 p-6">
+      <ul className="h-screen flex items-center bg-green-700 p-6">
         <div className="container h-64">
           <li
             onClick={() => setShowMenu(false)}

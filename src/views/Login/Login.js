@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import { LOGIN } from "../../api/Endpoints";
 import useAuth from "../../hooks/useAuth";
@@ -7,8 +7,11 @@ const Login = () => {
   const history = useHistory();
   const location = useLocation();
   const auth = useAuth();
-
   const { from } = location.state || { from: { pathname: "/" } };
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const login = () => {
     fetch(LOGIN, {
       method: "POST",
@@ -17,8 +20,8 @@ const Login = () => {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        // email: "",
-        // password: "",
+        email,
+        password,
       }),
     })
       .then((response) => {
@@ -44,7 +47,7 @@ const Login = () => {
         } else if (status === 401) {
           alert("Invalid token!");
         } else if (status >= 402 && status <= 499) {
-          alert(`${statusText}. ${message} Error code: ${status}`);
+          alert(`${statusText}. ${message && message} Error code: ${status}`);
         } else {
           alert("Server error.");
         }
@@ -62,6 +65,11 @@ const Login = () => {
           {"Login"}
         </h1>
         <p>You must log in to view the page at {from.pathname}</p>
+        <input onChange={(e) => setEmail(e.target.value)} placeholder="email" />
+        <input
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="password"
+        />
       </div>
     </div>
   );

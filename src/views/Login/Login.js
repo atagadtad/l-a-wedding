@@ -49,7 +49,7 @@ const Login = () => {
 
         <input
           onChange={(e) => setEmail(e.target.value)}
-          class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="email"
           placeholder="Email"
         />
@@ -57,13 +57,13 @@ const Login = () => {
         <input
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          class="bg-white mt-4 focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          className="bg-white mt-4 focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="email"
         />
-        <div class="flex justify-center">
+        <div className="flex justify-center">
           <button
             onClick={login}
-            class="bg-green-500 mt-3  focus:outline-none hover:bg-blue-700 text-white font-bold py-2 px-4 tracking-wider rounded-md"
+            className="bg-green-500 mt-3  focus:outline-none hover:bg-blue-700 text-white font-bold py-2 px-4 tracking-wider rounded-md"
           >
             Login
           </button>

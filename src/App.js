@@ -94,28 +94,29 @@ function PrivateRoute({ children, ...rest }) {
 function AuthButton() {
   const history = useHistory();
   const auth = useAuth();
-  return auth.user ? (
-    <p>
-      Welcome!{" "}
-      <button
-        className="bg-red-600"
-        onClick={() => {
-          auth.signout(() => {
-            console.log("signed out!");
-            history.push("/");
-          });
-        }}
-      >
-        Sign out
-      </button>
-    </p>
-  ) : (
-    <p>You are not logged in.</p>
+  return (
+    auth.user && (
+      <p>
+        Welcome!{" "}
+        <button
+          className="bg-red-600"
+          onClick={() => {
+            auth.signout(() => {
+              console.log("signed out!");
+              history.push("/");
+            });
+          }}
+        >
+          Sign out
+        </button>
+      </p>
+    )
   );
 }
 
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
+  const auth = useAuth();
 
   return (
     <ProvideAuth>
@@ -134,6 +135,7 @@ export default function App() {
               {showMenu ? "Lelaine & Aaron" : "L & A"}
             </Link>
           </div>
+
           <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
           {showMenu ? (
             <Menu showMenu={showMenu} setShowMenu={setShowMenu} />

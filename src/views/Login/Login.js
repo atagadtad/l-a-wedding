@@ -38,20 +38,33 @@ const Login = () => {
   };
 
   return (
-    <div className="container h-screen  bg-teal-500">
+    <div className="container h-screen p-6  bg-teal-500">
       <div className="pt-16">
         <h1 className="text-gray-300 flex justify-center items-center px-4 py-2 text-6xl font-semibold">
           {"Login"}
         </h1>
-        <p>You must log in to view the page at {from.pathname}</p>
-        <input onChange={(e) => setEmail(e.target.value)} placeholder="email" />
+
+        <input
+          onChange={(e) => setEmail(e.target.value)}
+          class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          type="email"
+          placeholder="Email"
+        />
+
         <input
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="password"
+          placeholder="Password"
+          class="bg-white mt-2 focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          type="email"
         />
-        <button className="bg-red-400 rounded-sm px-2 py-3" onClick={login}>
-          Login
-        </button>
+        <div class="flex justify-center">
+          <button
+            onClick={login}
+            class="bg-blue-500 mt-3  focus:outline-none hover:bg-blue-700 text-white font-bold py-2 px-4 tracking-wider rounded-md"
+          >
+            Login
+          </button>
+        </div>
       </div>
     </div>
   );

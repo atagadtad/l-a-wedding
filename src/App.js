@@ -141,7 +141,7 @@ export default function App() {
             <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
           ) : (
             <>
-              <AuthButton />
+              {/* <AuthButton /> */}
               <Switch>
                 <Route path="/login">
                   <Login />

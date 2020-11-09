@@ -135,9 +135,17 @@ export default function App() {
               } text-3xl select-none font-bold`}
             >
               {showMenu ? (
-                "Lelaine & Aaron"
+                <img
+                  className="w-40 h-10 object-contain"
+                  src={mainLogo}
+                  alt={`L & A`}
+                />
               ) : (
-                <img className="w-40 h-10 object-contain" src={mainLogo} />
+                <img
+                  className="w-40 h-10 object-contain"
+                  src={mainLogo}
+                  alt={`L & A`}
+                />
               )}
             </Link>
           </div>

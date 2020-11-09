@@ -18,6 +18,9 @@ import Login from "./views/Login/Login";
 // Contexts
 import authContext from "./contexts/AuthContext";
 
+// Assets
+import mainLogo from "./assets/pngs/LALogoStraight72ppi.png";
+
 /** AUTH hooks **/
 const fakeAuth = {
   isAuthenticated: false,
@@ -131,7 +134,11 @@ export default function App() {
                 showMenu && "text-white text-3xl font-semibold"
               } text-3xl select-none font-bold`}
             >
-              {showMenu ? "Lelaine & Aaron" : "L & A"}
+              {showMenu ? (
+                "Lelaine & Aaron"
+              ) : (
+                <img className="w-40 h-10 object-contain" src={mainLogo} />
+              )}
             </Link>
           </div>
 

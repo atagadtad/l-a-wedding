@@ -27,7 +27,7 @@ const RSVP = () => {
         </div>
       </div>
       {showForm && (
-        <div className="h-screen  absolute inset-0 bg-gray-100">
+        <div className="h-screen pt-6  absolute inset-0 bg-gray-100">
           <div className="py-3 flex w-screen justify-space-between items-start">
             <div className="mx-10">
               <h1 className="text-gray-800 font-semibold text-2xl">{`RSVP for Lelaine & Aaron's Wedding`}</h1>
@@ -64,12 +64,30 @@ const RSVP = () => {
                 className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block appearance-none leading-normal"
               />
             </div>
-            <h1 className="text-gray-800 my-4">Email: *</h1>
+            <h1 className="text-gray-800 mt-6 mb-3">Email: *</h1>
             <div className="flex">
               <input
                 placeholder="Email"
                 className="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
               />
+            </div>
+
+            <h1 className="text-gray-800 mt-6 mb-1">
+              Will you be attending? *
+            </h1>
+            <div class="md:flex md:items-center mb-1">
+              <div class="md:w-1/3"></div>
+              <label class="md:w-2/3 block text-gray-500 font-bold">
+                <input class="mr-2 leading-tight" type="checkbox" />
+                <span class="text-sm">Yes</span>
+              </label>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+              <div class="md:w-1/3"></div>
+              <label class="md:w-2/3 block text-gray-500 font-bold">
+                <input class="mr-2 leading-tight" type="checkbox" />
+                <span class="text-sm">No</span>
+              </label>
             </div>
           </div>
         </div>

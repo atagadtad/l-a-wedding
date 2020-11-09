@@ -27,14 +27,17 @@ const RSVP = () => {
         </div>
       </div>
       {showForm && (
-        <div className="h-screen absolute inset-0 bg-red-300">
-          <div className="px-3 py-3 flex w-screen justify-end">
+        <div className="h-screen  absolute inset-0 bg-gray-100">
+          <div className="py-3 flex w-screen justify-space-between items-start">
+            <div className="mx-10">
+              <h1 className="text-gray-800 font-semibold text-2xl">{`RSVP for Lelaine & Aaron's Wedding`}</h1>
+            </div>
             <button
-              className="flex items-center px-3 py-2  text-teal-200 border-teal-400 hover:text-white hover:border-white"
+              className="flex mx-10 items-center px-3 py-2  text-teal-200 border-teal-400 hover:text-white hover:border-white"
               onClick={() => setShowForm(!showForm)}
             >
               <svg
-                className="text-white h-6 w-6"
+                className="text-gray-800 h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -48,6 +51,26 @@ const RSVP = () => {
                 />
               </svg>
             </button>
+          </div>
+          <div className="h-full mx-10">
+            <h1 className="text-gray-800 mb-3">Name: *</h1>
+            <div className="flex justify-between">
+              <input
+                placeholder="First Name"
+                className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block  appearance-none leading-normal"
+              />
+              <input
+                placeholder="Last Name"
+                className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block appearance-none leading-normal"
+              />
+            </div>
+            <h1 className="text-gray-800 my-4">Email: *</h1>
+            <div className="flex">
+              <input
+                placeholder="Email"
+                className="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+              />
+            </div>
           </div>
         </div>
       )}

@@ -49,7 +49,7 @@ const Login = () => {
 
         <input
           onChange={(e) => setEmail(e.target.value)}
-          className="bg-white font-serif focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          className="bg-white  focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="email"
           placeholder="Email"
         />
@@ -57,7 +57,7 @@ const Login = () => {
         <input
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
-          className="bg-white mt-4 focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          className="bg-white mt-4  focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="password"
         />
         <div className="flex justify-center">

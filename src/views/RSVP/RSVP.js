@@ -7,11 +7,11 @@ const RSVP = () => {
     <div className="sm:container h-screen  bg-green-700">
       <div className="pt-16 h-full flex items-center">
         <div className="w-screen mb-40">
-          <h1 className="text-gray-300 flex justify-start px-4 py-2 text-6xl font-semibold">
+          <h1 className="text-gray-300 flex justify-start px-4 py-2 text-6xl font-serif">
             RSVP
           </h1>
           <div className="px-4 mb-6">
-            <p className="text-xl text-gray-100">
+            <p className="text-xl text-gray-100 font-serif">
               We look forward to celebrating with you! <br />
               Confirm with the button.
             </p>
@@ -19,7 +19,7 @@ const RSVP = () => {
           <div className="px-4 py-2">
             <button
               onClick={() => setShowForm(!showForm)}
-              className="uppercase border focus:outline-none text-lg font-thin text-white py-3 px-5 border-solid border-white"
+              className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
             >
               I'll be there!
             </button>
@@ -27,13 +27,13 @@ const RSVP = () => {
         </div>
       </div>
       {showForm && (
-        <div className="h-screen pt-6 overflow-hidden  absolute inset-0 bg-gray-100">
+        <div className="h-screen pt-6 overflow-hidden absolute inset-0 bg-gray-100">
           <div className="py-3 flex w-screen justify-space-between items-start">
-            <div className="mx-10">
+            <div className="mx-6">
               <h1 className="text-gray-800 font-semibold text-lg">{`RSVP for Lelaine & Aaron's Wedding`}</h1>
             </div>
             <button
-              className="flex mx-10 items-center px-3 py-2  text-teal-200 border-teal-400 hover:text-white hover:border-white"
+              className="flex mx-10 items-center py-2  text-teal-200 border-teal-400 hover:text-white hover:border-white"
               onClick={() => setShowForm(!showForm)}
             >
               <svg
@@ -52,7 +52,7 @@ const RSVP = () => {
               </svg>
             </button>
           </div>
-          <div className="h-full mx-10">
+          <div className="h-full mx-6">
             <h1 className="text-gray-800 mb-3">Name: *</h1>
             <div className="flex justify-between">
               <input

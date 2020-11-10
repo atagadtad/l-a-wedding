@@ -27,10 +27,10 @@ const RSVP = () => {
         </div>
       </div>
       {showForm && (
-        <div className="h-screen pt-6  absolute inset-0 bg-gray-100">
+        <div className="h-screen pt-6 overflow-hidden  absolute inset-0 bg-gray-100">
           <div className="py-3 flex w-screen justify-space-between items-start">
             <div className="mx-10">
-              <h1 className="text-gray-800 font-semibold text-2xl">{`RSVP for Lelaine & Aaron's Wedding`}</h1>
+              <h1 className="text-gray-800 font-semibold text-lg">{`RSVP for Lelaine & Aaron's Wedding`}</h1>
             </div>
             <button
               className="flex mx-10 items-center px-3 py-2  text-teal-200 border-teal-400 hover:text-white hover:border-white"

@@ -187,7 +187,7 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
     <div className="absolute right-0 p-6 block lg:hidden">
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
+        className="flex items-center px-3 py-2 border focus:outline-none rounded text-gray-200 border-gray-200 hover:text-white hover:border-white"
       >
         <svg
           className="fill-current h-4 w-4"

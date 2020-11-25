@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="container pt-16 pb-6 overscroll-auto  bg-green-700">
       <div className="">
-        <p className="text-gray-300 font-serif flex justify-center items-center px-4 py-2 text-6xl leading-10">
+        <p className="text-gray-300 font-serif flex justify-center items-center px-4 py-2 text-6xl leading-snug">
           {`Lelaine & Aaron Are Tying The Knot`}
         </p>
       </div>

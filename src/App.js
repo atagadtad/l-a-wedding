@@ -212,25 +212,25 @@ const Menu = ({ showMenu, setShowMenu }) => {
         <div className="container h-64">
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center text-white text-2xl font-serif"
+            className="flex justify-center text-gray-300 text-2xl font-serif"
           >
             <Link to="/">Home</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center text-2xl font-serif"
+            className="text-gray-900 flex justify-center text-2xl font-serif"
           >
             <Link to="/our-story">Our Story</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center text-2xl font-serif"
+            className="text-gray-900 flex justify-center text-2xl font-serif"
           >
             <Link to="/travel-stay">{"Travel & Stay"}</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center text-2xl font-serif"
+            className="text-gray-900 flex justify-center text-2xl font-serif"
           >
             <Link to="/rsvp">RSVP</Link>
           </li>

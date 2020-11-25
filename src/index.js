@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./assets/main.css";
+import "./tailwind.output.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import axios from "axios";

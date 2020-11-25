@@ -21,7 +21,7 @@ import authContext from "./contexts/AuthContext";
 // Assets
 import mainLogo from "./assets/pngs/LALogoStraight72ppi.png";
 import mainWhiteLogo from "./assets/pngs/LALogoStraight_White.png";
-import whiteCurvedLogo from "./assets/pngs/LALogoCurved_White.72ppi.png";
+// import whiteCurvedLogo from "./assets/pngs/LALogoCurved_White.72ppi.png";
 
 /** AUTH hooks **/
 const fakeAuth = {

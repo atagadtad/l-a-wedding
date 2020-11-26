@@ -618,6 +618,13 @@ video {
   }
 }
 
+@font-face {
+  font-family: "Mirage";
+
+  src: local("Mirage"),
+    url(./fonts/made_mirage_regular-webfont.woff) format("woff");
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -10310,7 +10317,7 @@ video {
 }
 
 .font-serif {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Mirage;
 }
 
 .font-mono {
@@ -32505,7 +32512,7 @@ video {
   }
 
   .sm\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Mirage;
   }
 
   .sm\:font-mono {
@@ -54635,7 +54642,7 @@ video {
   }
 
   .md\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Mirage;
   }
 
   .md\:font-mono {
@@ -76765,7 +76772,7 @@ video {
   }
 
   .lg\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Mirage;
   }
 
   .lg\:font-mono {
@@ -98895,7 +98902,7 @@ video {
   }
 
   .xl\:font-serif {
-    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Mirage;
   }
 
   .xl\:font-mono {

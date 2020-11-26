@@ -10,6 +10,18 @@ module.exports = {
   separator: ":",
   presets: [],
   theme: {
+    extend: {
+      fontFamily: {
+        serif: [
+          "Mirage",
+          // "Georgia",
+          // "Cambria",
+          // '"Times New Roman"',
+          // "Times",
+          // "serif",
+        ],
+      },
+    },
     screens: {
       sm: "640px",
       md: "768px",
@@ -276,7 +288,14 @@ module.exports = {
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
       ],
-      serif: ["Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
+      serif: [
+        "Mirage",
+        // "Georgia",
+        // "Cambria",
+        // '"Times New Roman"',
+        // "Times",
+        // "serif",
+      ],
       mono: [
         "Menlo",
         "Monaco",

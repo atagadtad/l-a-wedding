@@ -42,31 +42,41 @@ const Login = () => {
 
   return (
     <div className="container h-screen p-6  bg-green-700">
-      <div className="pt-16">
-        <h1 className="text-gray-300 flex justify-center items-center px-4 py-2 text-6xl font-serif">
-          {"Login"}
-        </h1>
+      <div className="flex flex-col h-full justify-center pb-16">
+        <div className="flex flex-col">
+          <h1 className="text-gray-300 flex justify-center items-center px-4 py-6 text-6xl font-serif">
+            {"Login"}
+          </h1>
 
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          className="bg-white font-serif focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-          type="email"
-          placeholder="Email"
-        />
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            className="bg-white font-serif focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+            type="email"
+            placeholder="Email"
+          />
 
-        <input
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          className="bg-white mt-4  focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-          type="password"
-        />
-        <div className="flex justify-center">
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="bg-white mt-4  focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+            type="password"
+          />
+          {/* <div className="flex justify-center">
           <button
             onClick={login}
             className="bg-green-900 mt-3 font-serif focus:outline-none hover:bg-blue-700 text-white py-2 px-4 tracking-widest rounded-md"
           >
             Login
           </button>
+        </div> */}
+          <div className="px-4 py-8 flex justify-center">
+            <button
+              onClick={login}
+              className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+            >
+              LOGIN
+            </button>
+          </div>
         </div>
       </div>
     </div>

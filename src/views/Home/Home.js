@@ -51,7 +51,7 @@ const Home = () => {
       </div>
 
       <div className="px-4 mt-6">
-        <img src={Proposal} />
+        <img src={Proposal} alt="L-A" />
       </div>
       <div className="px-10 py-10 mt-10 divide-y-2 divide-white">
         <div></div>

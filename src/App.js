@@ -125,10 +125,10 @@ export default function App() {
   return (
     <ProvideAuth>
       <Router>
-        <div className="container">
+        <div className="mx-auto container ">
           <div
             onClick={() => showMenu && setShowMenu(false)}
-            className="absolute left-0 p-6 block lg:hidden"
+            className="absolute md:left-10 p-6 block "
           >
             <Link
               to="/"
@@ -186,7 +186,7 @@ export default function App() {
 
 const MenuButton = ({ showMenu, setShowMenu }) => {
   return (
-    <div className="absolute right-0 p-6 block lg:hidden">
+    <div className="absolute right-0 p-6 block sm:hidden">
       <button
         onClick={() => setShowMenu(!showMenu)}
         className="flex items-center px-3 py-2 border focus:outline-none rounded text-gray-200 border-gray-200 hover:text-white hover:border-white"

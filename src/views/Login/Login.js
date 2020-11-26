@@ -61,14 +61,6 @@ const Login = () => {
             className="bg-white mt-4  focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
             type="password"
           />
-          {/* <div className="flex justify-center">
-          <button
-            onClick={login}
-            className="bg-green-900 mt-3 font-serif focus:outline-none hover:bg-blue-700 text-white py-2 px-4 tracking-widest rounded-md"
-          >
-            Login
-          </button>
-        </div> */}
           <div className="px-4 py-8 flex justify-center">
             <button
               onClick={login}

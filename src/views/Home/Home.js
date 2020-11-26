@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Proposal from "../../assets/jpgs/black_white_l_a.jpg";
 
 const Home = () => {
   return (
@@ -24,12 +26,12 @@ const Home = () => {
         </p>
       </div>
       <div>
-        <h1 className="text-xl uppercase tracking-wide font-serif px-4 pt-8">
+        <h1 className="text-xl uppercase tracking-wide font-serif px-4 pt-8 pb-1">
           Reception
         </h1>
       </div>
       <div>
-        <h1 className="text-gray-300 py-6 px-4 text-2xl font-serif underline">
+        <h1 className="text-gray-300 py-8 px-4 text-xl font-serif underline">
           Oak Lobby
         </h1>
       </div>
@@ -39,6 +41,21 @@ const Home = () => {
           Kitchener, ON <br />
           5:00 PM - 11 PM
         </p>
+      </div>
+      <div className="mt-5">
+        <div className="px-4 py-2">
+          <button className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
+            <Link to="/RSVP">I'll be there!</Link>
+          </button>
+        </div>
+      </div>
+
+      <div className="px-4 mt-6">
+        <img src={Proposal} />
+      </div>
+      <div className="px-10 py-10 mt-10 divide-y-2 divide-white">
+        <div></div>
+        <div></div>
       </div>
     </div>
   );

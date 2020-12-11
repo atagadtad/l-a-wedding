@@ -96,88 +96,58 @@ function PrivateRoute({ children, ...rest }) {
   );
 }
 
-// function AuthButton() {
-//   const history = useHistory();
-//   const auth = useAuth();
-//   return (
-//     auth.user && (
-//       <p>
-//         Welcome!{" "}
-//         <button
-//           className="bg-red-600"
-//           onClick={() => {
-//             auth.signout(() => {
-//               console.log("signed out!");
-//               history.push("/");
-//             });
-//           }}
-//         >
-//           Sign out
-//         </button>
-//       </p>
-//     )
-//   );
-// }
-
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <ProvideAuth>
       <Router>
-        <div className="mx-auto container ">
-          <div
-            onClick={() => showMenu && setShowMenu(false)}
-            className="absolute md:left-10 p-6 block "
-          >
-            <Link
-              to="/"
-              className={`${
-                showMenu && "text-white text-3xl font-semibold"
-              } text-3xl select-none font-bold`}
+        <div className="bg-green-700">
+          <div className="mx-auto container ">
+            <div
+              onClick={() => showMenu && setShowMenu(false)}
+              className="absolute md:left-10 p-6 block "
             >
-              {showMenu ? (
+              <Link
+                to="/"
+                className={`${
+                  showMenu && "text-white text-3xl font-semibold"
+                } text-3xl select-none font-bold`}
+              >
                 <img
                   className="w-40 h-10 object-contain"
                   src={mainWhiteLogo}
                   alt={`L & A`}
                 />
-              ) : (
-                <img
-                  className="w-40 h-10 object-contain"
-                  src={mainLogo}
-                  alt={`L & A`}
-                />
-              )}
-            </Link>
+              </Link>
+            </div>
+
+            <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
+            {showMenu ? (
+              <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
+            ) : (
+              <>
+                <Switch>
+                  <Route path="/login">
+                    <Login />
+                  </Route>
+                  <PrivateRoute path="/our-story">
+                    <OurStory />
+                  </PrivateRoute>
+                  <PrivateRoute path="/travel-stay">
+                    <TravelStay />
+                  </PrivateRoute>
+
+                  <PrivateRoute path="/rsvp">
+                    <RSVP />
+                  </PrivateRoute>
+                  <PrivateRoute path="/">
+                    <Home />
+                  </PrivateRoute>
+                </Switch>
+              </>
+            )}
           </div>
-
-          <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
-          {showMenu ? (
-            <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
-          ) : (
-            <>
-              {/* <AuthButton /> */}
-              <Switch>
-                <Route path="/login">
-                  <Login />
-                </Route>
-                <PrivateRoute path="/our-story">
-                  <OurStory />
-                </PrivateRoute>
-                <PrivateRoute path="/travel-stay">
-                  <TravelStay />
-                </PrivateRoute>
-
-                <PrivateRoute path="/rsvp">
-                  <RSVP />
-                </PrivateRoute>
-                <PrivateRoute path="/">
-                  <Home />
-                </PrivateRoute>
-              </Switch>
-            </>
-          )}
         </div>
       </Router>
     </ProvideAuth>
@@ -186,7 +156,7 @@ export default function App() {
 
 const MenuButton = ({ showMenu, setShowMenu }) => {
   return (
-    <div className="absolute right-0 p-6 block sm:hidden">
+    <div className="absolute right-0 p-6 block lg:hidden">
       <button
         onClick={() => setShowMenu(!showMenu)}
         className="flex items-center px-3 py-2 border focus:outline-none rounded text-gray-200 border-gray-200 hover:text-white hover:border-white"

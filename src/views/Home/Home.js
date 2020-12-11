@@ -1,64 +1,82 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Proposal from "../../assets/jpgs/black_white_l_a.jpg";
 
 const Home = () => {
   return (
     <div className="container pt-16 pb-6 overscroll-auto  bg-green-700">
       <div className="pt-8">
-        <p className="text-gray-300 font-serif flex justify-center items-center px-4 py-2 text-6xl uppercase leading-snug">
+        <p className="text-gray-300 font-serif flex justify-center md:justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying <br /> The Knot
         </p>
       </div>
-      <div>
-        <h1 className="text-xl font-serif uppercase px-4 pt-12">Ceremony</h1>
-      </div>
-      <div>
-        <h1 className="text-gray-300 py-8 px-4 text-xl tracking-wide font-serif underline">
-          Crystal Ballroom
-        </h1>
-      </div>
-      <div>
-        <p className="text-gray-300 px-4 text-xl font-serif">
-          20 Queen St South <br />
-          Kitchener, ON <br />
-          4:00 PM
-        </p>
-      </div>
-      <div>
-        <h1 className="text-xl uppercase tracking-wide font-serif px-4 pt-8 pb-1">
-          Reception
-        </h1>
-      </div>
-      <div>
-        <h1 className="text-gray-300 py-8 px-4 text-xl font-serif underline">
-          Oak Lobby
-        </h1>
-      </div>
-      <div>
-        <p className="text-gray-300 px-4 text-xl font-serif">
-          20 Queen St South <br />
-          Kitchener, ON <br />
-          5:00 PM - 11 PM
-        </p>
-      </div>
-      <div className="mt-5">
-        <div className="px-4 py-2">
-          <button className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
-            <Link to="/RSVP">I'll be there!</Link>
-          </button>
+
+      <div className="flex flex-col md:flex-row">
+        <LocationDetails
+          header="Ceremony"
+          location="Crystal Ballroom"
+          details={["20 Queen St South", "Kitchener, ON", "4:00 PM"]}
+        />
+
+        <LocationDetails
+          header="Reception"
+          location="Oak Lobby"
+          details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
+        />
+
+        <div className="px-4 mt-6">
+          <img src="http://127.0.0.1:8000/storage/l-a-cheek.jpg" alt="L-A" />
         </div>
       </div>
 
-      <div className="px-4 mt-6">
-        <img src={Proposal} alt="L-A" />
-      </div>
-      <div className="px-10 py-10 mt-10 divide-y-2 divide-white">
-        <div></div>
-        <div></div>
-      </div>
+      <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
+      {/* 
+      <div className="px-4 mt-6 md:hidden">
+        <img src="http://127.0.0.1:8000/storage/l-a-cheek.jpg" alt="L-A" />
+      </div> */}
+
+      <WhiteDivider />
     </div>
   );
 };
 
 export default Home;
+
+const LocationDetails = ({ header, location, details }) => {
+  const mapDetails = details.map((string) => (
+    <p className="text-gray-300 px-4 text-xl font-serif">{string}</p>
+  ));
+  return (
+    <div className="flex-col">
+      <div>
+        <h1 className="text-xl font-serif uppercase px-4 pt-12">{header}</h1>
+      </div>
+      <div>
+        <h1 className="text-gray-300 py-8 px-4 text-xl tracking-wide font-serif underline">
+          {location}
+        </h1>
+      </div>
+      <div>{mapDetails}</div>
+    </div>
+  );
+};
+
+const LAButton = ({ buttonText, navigatesTo }) => {
+  return (
+    <div className="mt-5">
+      <div className="px-4 py-2">
+        <button className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
+          <Link to={navigatesTo}>{buttonText}</Link>
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const WhiteDivider = () => {
+  return (
+    <div className="px-10 py-10 mt-10 divide-y-2 divide-white">
+      <div></div>
+      <div></div>
+    </div>
+  );
+};

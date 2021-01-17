@@ -99,7 +99,7 @@ export default function App() {
   return (
     <ProvideAuth>
       <Router>
-        <div className="bg-green-700">
+        <div className="bg-green-700 h-screen">
           <div className="mx-auto container">
             <NavigationBar showMenu={showMenu} setShowMenu={setShowMenu} />
             {showMenu ? (
@@ -156,8 +156,8 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
 const Menu = ({ setShowMenu }) => {
   return (
     <nav>
-      <ul className="h-screen flex items-center bg-green-700 p-6">
-        <div className="container h-64">
+      <ul className="h-auto flex items-center bg-green-700 mt-12 p-6">
+        <div className="container">
           <li
             onClick={() => setShowMenu(false)}
             className="flex justify-center text-gray-300 text-2xl font-serif"

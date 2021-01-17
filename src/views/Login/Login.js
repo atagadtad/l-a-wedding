@@ -9,9 +9,7 @@ import { parseResponse, handleResponse } from "../../helpers/HelperFunctions";
 
 const Login = () => {
   const history = useHistory();
-  // const location = useLocation();
   const auth = useAuth();
-  // const { from } = location.state || { from: { pathname: "/" } };
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -30,7 +28,6 @@ const Login = () => {
     })
       .then((response) => parseResponse(response))
       .then((result) => {
-        // console.log({ result });
         handleResponse(result, () => {
           auth.signin(() => {
             history.push("/");
@@ -41,7 +38,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container mx-auto h-screen p-6  bg-green-700">
+    <div className="container mx-auto p-6 bg-green-700">
       <div className="flex flex-col h-full justify-center pb-16">
         <div className="flex flex-col">
           <h1 className="text-gray-300 flex justify-center items-center px-4 py-6 text-6xl font-serif">

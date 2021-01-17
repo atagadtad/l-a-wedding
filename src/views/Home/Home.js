@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container pt-16 pb-6 overscroll-auto  bg-green-700">
+    <div className="container pb-6 overscroll-auto  bg-green-700">
       <div className="pt-8">
         <p className="text-gray-300 font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying <br /> The Knot
         </p>
       </div>
 
-      {/* <div className="flex flex-col md:flex-row"> */}
       <div className="flex-row md:grid md:grid-cols-2">
         <div className="flex-col md:flex-row">
           <LocationDetails
@@ -28,7 +27,6 @@ const Home = () => {
 
         <div className="flex px-4 mt-6">
           <img
-            // className="object-cover w-full md:w-2/3"
             src="https://server.l-a-wedding.net/storage/l-a-cheek.jpg"
             alt="L-A"
           />

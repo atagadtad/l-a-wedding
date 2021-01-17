@@ -99,7 +99,7 @@ export default function App() {
   return (
     <ProvideAuth>
       <Router>
-        <div className="bg-green-700 h-auto">
+        <div className="bg-green-700 h-screen overflow-auto">
           <div className="mx-auto container">
             <NavigationBar showMenu={showMenu} setShowMenu={setShowMenu} />
             {showMenu ? (

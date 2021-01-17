@@ -207,8 +207,44 @@ const NavigationBar = ({ showMenu, setShowMenu }) => {
             alt={`L & A`}
           />
         </Link>
+        <DesktopMenu setShowMenu={setShowMenu} />
         <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
       </div>
     </>
+  );
+};
+
+const DesktopMenu = ({ setShowMenu }) => {
+  return (
+    <nav className="invisible lg:visible w-1/2 xl:w-1/3">
+      <ul className="">
+        <div className="flex justify-evenly">
+          <li
+            onClick={() => setShowMenu(false)}
+            className="flex justify-center text-gray-300 text-2xl font-serif"
+          >
+            <Link to="/">Home</Link>
+          </li>
+          <li
+            onClick={() => setShowMenu(false)}
+            className="text-gray-900 flex justify-center text-2xl font-serif"
+          >
+            <Link to="/our-story">Our Story</Link>
+          </li>
+          <li
+            onClick={() => setShowMenu(false)}
+            className="text-gray-900 flex justify-center text-2xl font-serif"
+          >
+            <Link to="/travel-stay">{"Travel & Stay"}</Link>
+          </li>
+          <li
+            onClick={() => setShowMenu(false)}
+            className="text-gray-900 flex justify-center text-2xl font-serif"
+          >
+            <Link to="/rsvp">RSVP</Link>
+          </li>
+        </div>
+      </ul>
+    </nav>
   );
 };

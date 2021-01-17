@@ -101,25 +101,7 @@ export default function App() {
       <Router>
         <div className="bg-green-700">
           <div className="mx-auto container">
-            <div
-              onClick={() => showMenu && setShowMenu(false)}
-              className="flex md:left-10 pt-6 bg-red-300"
-            >
-              <Link
-                to="/"
-                className={`${
-                  showMenu && "text-white text-3xl font-semibold"
-                } text-3xl select-none font-bold`}
-              >
-                <img
-                  className="w-40 h-10 object-contain"
-                  src={mainWhiteLogo}
-                  alt={`L & A`}
-                />
-              </Link>
-            </div>
-
-            <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
+            <NavigationBar showMenu={showMenu} setShowMenu={setShowMenu} />
             {showMenu ? (
               <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
             ) : (
@@ -153,7 +135,7 @@ export default function App() {
 
 const MenuButton = ({ showMenu, setShowMenu }) => {
   return (
-    <div className="absolute right-0 p-6 block lg:hidden">
+    <div className="block lg:hidden">
       <button
         onClick={() => setShowMenu(!showMenu)}
         className="flex items-center px-3 py-2 border focus:outline-none rounded text-gray-200 border-gray-200 hover:text-white hover:border-white"
@@ -204,5 +186,30 @@ const Menu = ({ showMenu, setShowMenu }) => {
         </div>
       </ul>
     </nav>
+  );
+};
+
+const NavigationBar = ({ showMenu, setShowMenu }) => {
+  return (
+    <>
+      <div
+        onClick={() => showMenu && setShowMenu(false)}
+        className="flex justify-between pt-6 bg-red-300"
+      >
+        <Link
+          to="/"
+          className={`${
+            showMenu && "text-white text-3xl font-semibold"
+          } text-3xl select-none font-bold`}
+        >
+          <img
+            className="w-40 h-10 object-contain"
+            src={mainWhiteLogo}
+            alt={`L & A`}
+          />
+        </Link>
+        <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
+      </div>
+    </>
   );
 };

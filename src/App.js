@@ -103,7 +103,7 @@ export default function App() {
           <div className="mx-auto container">
             <NavigationBar showMenu={showMenu} setShowMenu={setShowMenu} />
             {showMenu ? (
-              <Menu showMenu={showMenu} setShowMenu={setShowMenu} />
+              <Menu setShowMenu={setShowMenu} />
             ) : (
               <>
                 <Switch>
@@ -153,10 +153,9 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
   );
 };
 
-const Menu = ({ showMenu, setShowMenu }) => {
+const Menu = ({ setShowMenu }) => {
   return (
     <nav>
-      <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
       <ul className="h-screen flex items-center bg-green-700 p-6">
         <div className="container h-64">
           <li
@@ -194,7 +193,7 @@ const NavigationBar = ({ showMenu, setShowMenu }) => {
     <>
       <div
         onClick={() => showMenu && setShowMenu(false)}
-        className="flex justify-between pt-6 bg-red-300"
+        className="flex justify-between pt-6 px-3"
       >
         <Link
           to="/"

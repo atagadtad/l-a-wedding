@@ -99,7 +99,7 @@ export default function App() {
   return (
     <ProvideAuth>
       <Router>
-        <div className="bg-green-700 h-screen">
+        <div className="bg-green-700 h-auto">
           <div className="mx-auto container">
             <NavigationBar showMenu={showMenu} setShowMenu={setShowMenu} />
             {showMenu ? (
@@ -193,7 +193,7 @@ const NavigationBar = ({ showMenu, setShowMenu }) => {
     <>
       <div
         onClick={() => showMenu && setShowMenu(false)}
-        className="flex justify-between pt-6 px-3"
+        className="flex justify-between pt-6 px-4"
       >
         <Link
           to="/"

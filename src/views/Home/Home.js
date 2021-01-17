@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="container pb-6 overscroll-auto  bg-green-700">
-      <div className="pt-8">
+    <div className="container md:mt-12 overscroll-auto bg-green-700">
+      <div>
         <p className="text-gray-300 font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying <br /> The Knot
         </p>
       </div>
 
-      <div className="flex-row md:grid md:grid-cols-2">
+      <div className="flex-row px-4 md:grid md:grid-cols-2">
         <div className="flex-col md:flex-row">
           <LocationDetails
             header="Ceremony"
@@ -65,7 +65,7 @@ const LocationDetails = ({ header, location, details }) => {
 
 const LAButton = ({ buttonText, navigatesTo }) => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 px-4">
       <div className="px-4 py-2">
         <button className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
           <Link to={navigatesTo}>{buttonText}</Link>

@@ -5,34 +5,37 @@ const Home = () => {
   return (
     <div className="container pt-16 pb-6 overscroll-auto  bg-green-700">
       <div className="pt-8">
-        <p className="text-gray-300 font-serif flex justify-center md:justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
+        <p className="text-gray-300 font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying <br /> The Knot
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row">
-        <LocationDetails
-          header="Ceremony"
-          location="Crystal Ballroom"
-          details={["20 Queen St South", "Kitchener, ON", "4:00 PM"]}
-        />
+      {/* <div className="flex flex-col md:flex-row"> */}
+      <div className="flex-row md:grid md:grid-cols-2">
+        <div className="flex-col md:flex-row">
+          <LocationDetails
+            header="Ceremony"
+            location="Crystal Ballroom"
+            details={["20 Queen St South", "Kitchener, ON", "4:00 PM"]}
+          />
 
-        <LocationDetails
-          header="Reception"
-          location="Oak Lobby"
-          details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
-        />
+          <LocationDetails
+            header="Reception"
+            location="Oak Lobby"
+            details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
+          />
+        </div>
 
-        <div className="px-4 mt-6">
-          <img src="http://127.0.0.1:8000/storage/l-a-cheek.jpg" alt="L-A" />
+        <div className="flex px-4 mt-6">
+          <img
+            // className="object-cover w-full md:w-2/3"
+            src="http://127.0.0.1:8000/storage/l-a-cheek.jpg"
+            alt="L-A"
+          />
         </div>
       </div>
 
       <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
-      {/* 
-      <div className="px-4 mt-6 md:hidden">
-        <img src="http://127.0.0.1:8000/storage/l-a-cheek.jpg" alt="L-A" />
-      </div> */}
 
       <WhiteDivider />
     </div>

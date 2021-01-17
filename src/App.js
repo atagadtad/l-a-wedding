@@ -5,7 +5,6 @@ import {
   Route,
   Link,
   Redirect,
-  // useHistory,
 } from "react-router-dom";
 
 // Custom Components
@@ -19,9 +18,7 @@ import Login from "./views/Login/Login";
 import authContext from "./contexts/AuthContext";
 
 // Assets
-import mainLogo from "./assets/pngs/LALogoStraight72ppi.png";
 import mainWhiteLogo from "./assets/pngs/LALogoStraight_White.png";
-// import whiteCurvedLogo from "./assets/pngs/LALogoCurved_White.72ppi.png";
 
 /** AUTH hooks **/
 const fakeAuth = {
@@ -103,10 +100,10 @@ export default function App() {
     <ProvideAuth>
       <Router>
         <div className="bg-green-700">
-          <div className="mx-auto container ">
+          <div className="mx-auto container">
             <div
               onClick={() => showMenu && setShowMenu(false)}
-              className="absolute md:left-10 p-6 block "
+              className="flex md:left-10 pt-6 bg-red-300"
             >
               <Link
                 to="/"

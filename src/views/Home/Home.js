@@ -29,7 +29,7 @@ const Home = () => {
         <div className="flex px-4 mt-6">
           <img
             // className="object-cover w-full md:w-2/3"
-            src="http://127.0.0.1:8000/storage/l-a-cheek.jpg"
+            src="https://server.l-a-wedding.net/storage/l-a-cheek.jpg"
             alt="L-A"
           />
         </div>

@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// Custom Components
+import Text from "../../components/Text";
+
 const Home = () => {
   return (
     <div className="container md:mt-12 overscroll-auto bg-green-700">
@@ -8,6 +11,9 @@ const Home = () => {
         <p className="text-gray-300 font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying <br /> The Knot
         </p>
+      </div>
+      <div className="pt-4">
+        <CovidUpdate />
       </div>
 
       <div className="flex-row px-4 md:grid md:grid-cols-2">
@@ -35,7 +41,9 @@ const Home = () => {
 
       <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
 
-      <WhiteDivider />
+      <div className="px-8 my-10">
+        <WhiteDivider />
+      </div>
     </div>
   );
 };
@@ -77,9 +85,47 @@ const LAButton = ({ buttonText, navigatesTo }) => {
 
 const WhiteDivider = () => {
   return (
-    <div className="px-10 py-10 mt-10 divide-y-2 divide-white">
+    <div className="divide-y-2 divide-white">
       <div></div>
       <div></div>
+    </div>
+  );
+};
+
+const CovidUpdate = () => {
+  return (
+    <div className="px-8">
+      <div className="my-4">
+        <WhiteDivider />
+      </div>
+
+      <div className="mb-4">
+        <Text>Dear Friends and Family,</Text>
+      </div>
+      <Text>
+        We are so excited to celebrate our wedding with you! We know the last
+        few months (year!) have been a roller coaster ride for most of us but we
+        are believing in God’s best despite the pandemic.
+      </Text>
+      <div className="my-4">
+        <Text>
+          We will keep you updated via this website for any wedding plan
+          changes. We are keeping a close eye on government restrictions here
+          and also abroad.
+        </Text>
+      </div>
+      <Text>
+        Please join us in prayer that we may be able to celebrate with you all
+        in August!
+      </Text>
+      <div className="mt-4 mb-2">
+        <Text>Love,</Text>
+      </div>
+      <Text>Lelaine + Aaron</Text>
+
+      <div className="my-4">
+        <WhiteDivider />
+      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ const RSVP = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="sm:container h-screen  bg-green-700">
+    <div className="sm:container h-auto  bg-green-700">
       <div className="pt-16 h-full flex items-center">
         <div className="w-screen mb-40">
           <h1 className="text-gray-300 flex justify-start px-4 py-2 text-6xl font-serif">

@@ -43,8 +43,10 @@ const Home = () => {
 export default Home;
 
 const LocationDetails = ({ header, location, details }) => {
-  const mapDetails = details.map((string) => (
-    <p className="text-gray-300 px-4 text-xl font-serif">{string}</p>
+  const mapDetails = details.map((string, index) => (
+    <p key={index} className="text-gray-300 px-4 text-xl font-serif">
+      {string}
+    </p>
   ));
   return (
     <div className="flex-col">

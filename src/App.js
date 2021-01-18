@@ -100,7 +100,7 @@ export default function App() {
     <ProvideAuth>
       <Router>
         <div className="bg-green-700 h-screen overflow-auto">
-          <div className="mx-auto container">
+          <div className="mx-auto container h-full flex flex-col">
             <NavigationBar showMenu={showMenu} setShowMenu={setShowMenu} />
             {showMenu ? (
               <Menu setShowMenu={setShowMenu} />
@@ -155,36 +155,38 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
 
 const Menu = ({ setShowMenu }) => {
   return (
-    <nav>
-      <ul className="h-auto flex items-center bg-green-700 mt-12 p-6">
-        <div className="container">
-          <li
-            onClick={() => setShowMenu(false)}
-            className="flex justify-center text-gray-300 text-2xl font-serif"
-          >
-            <Link to="/">Home</Link>
-          </li>
-          <li
-            onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center text-2xl font-serif"
-          >
-            <Link to="/our-story">Our Story</Link>
-          </li>
-          <li
-            onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center text-2xl font-serif"
-          >
-            <Link to="/travel-stay">{"Travel & Stay"}</Link>
-          </li>
-          <li
-            onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center text-2xl font-serif"
-          >
-            <Link to="/rsvp">RSVP</Link>
-          </li>
-        </div>
-      </ul>
-    </nav>
+    <div className="flex flex-col h-full justify-center mb-64">
+      <nav>
+        <ul className="h-auto flex items-center bg-green-700">
+          <div className="container">
+            <li
+              onClick={() => setShowMenu(false)}
+              className="flex justify-center text-gray-300 text-2xl font-serif"
+            >
+              <Link to="/">Home</Link>
+            </li>
+            <li
+              onClick={() => setShowMenu(false)}
+              className="text-gray-900 flex justify-center text-2xl font-serif"
+            >
+              <Link to="/our-story">Our Story</Link>
+            </li>
+            <li
+              onClick={() => setShowMenu(false)}
+              className="text-gray-900 flex justify-center text-2xl font-serif"
+            >
+              <Link to="/travel-stay">{"Travel & Stay"}</Link>
+            </li>
+            <li
+              onClick={() => setShowMenu(false)}
+              className="text-gray-900 flex justify-center text-2xl font-serif"
+            >
+              <Link to="/rsvp">RSVP</Link>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

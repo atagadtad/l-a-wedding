@@ -38,7 +38,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container bg-green-700">
+    <div className="container bg-green-700 px-4">
       <h1 className="text-gray-300 flex justify-center items-center px-4 py-6 text-6xl font-serif">
         {"Login"}
       </h1>

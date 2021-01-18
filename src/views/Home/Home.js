@@ -31,9 +31,11 @@ const Home = () => {
           />
         </div>
 
-        <div className="flex px-4 mt-6">
+        <div className="px-4 mt-6">
           <img
-            src="https://server.l-a-wedding.net/storage/l-a-cheek.jpg"
+            className="object-contain"
+            // src="https://server.l-a-wedding.net/storage/l-a-cheek.jpg"
+            src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/l-a-cheek.jpg"
             alt="L-A"
           />
         </div>

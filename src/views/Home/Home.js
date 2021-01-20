@@ -9,7 +9,7 @@ const Home = () => {
     <div className="container md:mt-12 overscroll-auto bg-green-700">
       <div>
         <p className="text-gray-300 font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
-          Lelaine <br /> & Aaron Are <br /> Tying <br /> The Knot
+          Lelaine <br /> & Aaron Are <br /> Tying The Knot
         </p>
       </div>
       <div className="pt-4">
@@ -34,7 +34,6 @@ const Home = () => {
         <div className="px-4 mt-6">
           <img
             className="object-contain"
-            // src="https://server.l-a-wedding.net/storage/l-a-cheek.jpg"
             src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/l-a-cheek.jpg"
             alt="L-A"
           />

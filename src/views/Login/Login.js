@@ -3,7 +3,7 @@ import {
   useHistory,
   // useLocation
 } from "react-router-dom";
-import { LOGIN } from "../../api/Endpoints";
+import { PUBLIC_LOGIN } from "../../api/Endpoints";
 import useAuth from "../../hooks/useAuth";
 import { parseResponse, handleResponse } from "../../helpers/HelperFunctions";
 
@@ -11,18 +11,16 @@ const Login = () => {
   const history = useHistory();
   const auth = useAuth();
 
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const login = () => {
-    fetch(LOGIN, {
+    fetch(PUBLIC_LOGIN, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
-        email,
         password,
       }),
     })
@@ -42,17 +40,15 @@ const Login = () => {
       <h1 className="text-gray-300 flex justify-center items-center px-4 py-6 text-6xl font-serif">
         {"Login"}
       </h1>
-      <div className="flex justify-center">
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          className="bg-white max-w-lg font-serif focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-          type="email"
-          placeholder="Email"
-        />
-      </div>
+
       <div className="flex justify-center">
         <input
           onChange={(e) => setPassword(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              return login();
+            }
+          }}
           placeholder="Password"
           className="bg-white mt-4 max-w-lg font-serif focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="password"

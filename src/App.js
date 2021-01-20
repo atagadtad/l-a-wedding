@@ -1,4 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, {
+  useState,
+  // useContext
+} from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,11 +28,11 @@ const fakeAuth = {
   isAuthenticated: false,
   signin(cb) {
     fakeAuth.isAuthenticated = true;
-    setTimeout(cb, 100); // fake async
+    setTimeout(cb, 0); // fake async
   },
   signout(cb) {
     fakeAuth.isAuthenticated = false;
-    setTimeout(cb, 100);
+    setTimeout(cb, 0);
   },
 };
 
@@ -41,6 +44,7 @@ function useProvideAuth() {
   const signin = (cb) => {
     return fakeAuth.signin(() => {
       setUser("user");
+      sessionStorage.setItem("user", "true");
       cb();
     });
   };
@@ -64,21 +68,24 @@ function ProvideAuth({ children }) {
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
 
-function useAuth() {
-  return useContext(authContext);
-}
+// function useAuth() {
+//   return useContext(authContext);
+// }
 
 /** END AUTH hooks **/
 
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  const auth = useAuth();
+  // const auth = useAuth();
+  const session = sessionStorage.getItem("user");
+  console.log({ session });
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        auth.user ? (
+        // auth.user ? (
+        session === "true" ? (
           children
         ) : (
           <Redirect

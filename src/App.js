@@ -79,7 +79,6 @@ function ProvideAuth({ children }) {
 function PrivateRoute({ children, ...rest }) {
   // const auth = useAuth();
   const session = sessionStorage.getItem("user");
-  console.log({ session });
   return (
     <Route
       {...rest}

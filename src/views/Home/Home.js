@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // Custom Components
 import Text from "../../components/Text";
 
 const Home = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className="container md:mt-12 overscroll-auto bg-green-700">
       <div>
@@ -33,10 +35,16 @@ const Home = () => {
 
         <div className="px-4 mt-6">
           <img
-            className="object-contain"
+            onLoad={() => setImageLoaded(true)}
+            className={`object-contain ${!imageLoaded && "hidden"}`}
             src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/l-a-cheek.jpg"
             alt="L-A"
           />
+          {!imageLoaded && (
+            <div className="h-96 w-2/3 md:h-full md:w-full lg:w-2/3 ">
+              <div className=" animate-pulse bg-gray-300 h-full rounded-md"></div>
+            </div>
+          )}
         </div>
       </div>
 

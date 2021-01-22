@@ -28,6 +28,7 @@ const Login = () => {
     })
       .then((response) => parseResponse(response))
       .then((result) => {
+        if (result.status !== 200) setIsLoggingIn(false);
         handleResponse(result, () => {
           auth.signin(() => {
             setIsLoggingIn(false);
@@ -70,7 +71,7 @@ const Login = () => {
               <circle
                 className="bg-white"
                 stroke="white"
-                stroke-width="4"
+                strokeWidth="4"
                 fill="transparent"
                 r="52"
                 cx="60"

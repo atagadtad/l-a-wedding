@@ -31,12 +31,15 @@ const Home = () => {
             location="Oak Lobby"
             details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
           />
+          <div className="flex justify-start px-4 mt-12">
+            <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
+          </div>
         </div>
 
         <div className="px-4 mt-6">
           <img
             onLoad={() => setImageLoaded(true)}
-            className={`object-contain ${!imageLoaded && "hidden"}`}
+            className={`object-contain xl:w-4/5 ${!imageLoaded && "hidden"}`}
             src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/l-a-cheek.jpg"
             alt="L-A"
           />
@@ -48,7 +51,9 @@ const Home = () => {
         </div>
       </div>
 
-      <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
+      {/* <div className="px-8">
+        <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
+      </div> */}
 
       <div className="px-8 my-10">
         <WhiteDivider />
@@ -82,8 +87,8 @@ const LocationDetails = ({ header, location, details }) => {
 
 const LAButton = ({ buttonText, navigatesTo }) => {
   return (
-    <div className="mt-5 px-4">
-      <div className="px-4 py-2">
+    <div className="mt-5">
+      <div className="py-2">
         <button className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
           <Link to={navigatesTo}>{buttonText}</Link>
         </button>

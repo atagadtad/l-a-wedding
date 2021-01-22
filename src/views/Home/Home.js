@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 // Custom Components
 import Text from "../../components/Text";
@@ -19,7 +20,7 @@ const Home = () => {
       </div>
 
       <div className="flex-row px-4 md:grid md:grid-cols-2">
-        <div className="flex-col md:flex-row">
+        <div className="flex flex-col justify-between lg:justify-center">
           <LocationDetails
             header="Ceremony"
             location="Crystal Ballroom"
@@ -31,7 +32,7 @@ const Home = () => {
             location="Oak Lobby"
             details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
           />
-          <div className="flex justify-start px-4 mt-12">
+          <div className="flex justify-start px-4 mt-12 md:hidden lg:flex">
             <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
           </div>
         </div>
@@ -44,16 +45,19 @@ const Home = () => {
             alt="L-A"
           />
           {!imageLoaded && (
-            <div className="h-96 w-2/3 md:h-full md:w-full lg:w-2/3 ">
-              <div className=" animate-pulse bg-gray-300 h-full rounded-md"></div>
-            </div>
+            // {true && (
+            <SkeletonTheme color="#b5b8bd" highlightColor="#a5a6a7  ">
+              <div className="w-full xl:w-4/5">
+                <Skeleton height={handleWidth()} />
+              </div>
+            </SkeletonTheme>
           )}
         </div>
       </div>
 
-      {/* <div className="px-8">
+      <div className="px-8 hidden justify-center md:mt-10 md:flex lg:hidden ">
         <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
-      </div> */}
+      </div>
 
       <div className="px-8 my-10">
         <WhiteDivider />
@@ -63,6 +67,21 @@ const Home = () => {
 };
 
 export default Home;
+
+const handleWidth = () => {
+  let result = 0;
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth > 1024) {
+    result = 620;
+  } else if (windowWidth > 768) {
+    result = 480;
+  } else {
+    result = 480;
+  }
+
+  return result;
+};
 
 const LocationDetails = ({ header, location, details }) => {
   const mapDetails = details.map((string, index) => (
@@ -89,7 +108,7 @@ const LAButton = ({ buttonText, navigatesTo }) => {
   return (
     <div className="mt-5">
       <div className="py-2">
-        <button className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
+        <button className="uppercase border hover:bg-gray-300 hover:text-gray-500 hover:border-gray-300 focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
           <Link to={navigatesTo}>{buttonText}</Link>
         </button>
       </div>

@@ -19,7 +19,7 @@ const RSVP = () => {
           <div className="px-4 py-2">
             <button
               onClick={() => setShowForm(!showForm)}
-              className="uppercase border focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+              className="uppercase border hover:bg-gray-300 hover:text-gray-500 hover:border-gray-300 hover:font-extrabold focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
             >
               I'll be there!
             </button>
@@ -75,18 +75,18 @@ const RSVP = () => {
             <h1 className="text-gray-800 mt-6 mb-1">
               Will you be attending? *
             </h1>
-            <div class="md:flex md:items-center mb-1">
-              <div class="md:w-1/3"></div>
-              <label class="md:w-2/3 block text-gray-500 font-bold">
-                <input class="mr-2 leading-tight" type="checkbox" />
-                <span class="text-sm">Yes</span>
+            <div className="md:flex md:items-center mb-1">
+              <div className="md:w-1/3"></div>
+              <label className="md:w-2/3 block text-gray-500 font-bold">
+                <input className="mr-2 leading-tight" type="checkbox" />
+                <span className="text-sm">Yes</span>
               </label>
             </div>
-            <div class="md:flex md:items-center mb-6">
-              <div class="md:w-1/3"></div>
-              <label class="md:w-2/3 block text-gray-500 font-bold">
-                <input class="mr-2 leading-tight" type="checkbox" />
-                <span class="text-sm">No</span>
+            <div className="md:flex md:items-center mb-6">
+              <div className="md:w-1/3"></div>
+              <label className="md:w-2/3 block text-gray-500 font-bold">
+                <input className="mr-2 leading-tight" type="checkbox" />
+                <span className="text-sm">No</span>
               </label>
             </div>
           </div>

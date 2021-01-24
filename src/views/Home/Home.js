@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="container md:mt-12 overscroll-auto bg-green-700">
       <div>
-        <p className="text-gray-300 font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
+        <p className="text-white  font-serif flex justify-start items-center px-4 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying The Knot
         </p>
       </div>
@@ -85,7 +85,7 @@ const handleWidth = () => {
 
 const LocationDetails = ({ header, location, details }) => {
   const mapDetails = details.map((string, index) => (
-    <p key={index} className="text-gray-300 px-4 text-xl font-serif">
+    <p key={index} className="text-white  px-4 text-xl font-serif">
       {string}
     </p>
   ));
@@ -95,7 +95,7 @@ const LocationDetails = ({ header, location, details }) => {
         <h1 className="text-xl font-serif uppercase px-4 pt-12">{header}</h1>
       </div>
       <div>
-        <h1 className="text-gray-300 py-8 px-4 text-xl tracking-wide font-serif underline">
+        <h1 className="text-white py-8 px-4 text-xl tracking-wide font-serif underline">
           {location}
         </h1>
       </div>
@@ -108,7 +108,7 @@ const LAButton = ({ buttonText, navigatesTo }) => {
   return (
     <div className="mt-5">
       <div className="py-2">
-        <button className="uppercase border hover:bg-gray-300 hover:text-gray-500 hover:border-gray-300 focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
+        <button className="uppercase border hover:bg-white  hover:text-white hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white">
           <Link to={navigatesTo}>{buttonText}</Link>
         </button>
       </div>

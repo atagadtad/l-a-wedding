@@ -7,7 +7,7 @@ const RSVP = () => {
     <div className="sm:container h-auto  bg-green-700">
       <div className="pt-16 h-full flex items-center">
         <div className="w-screen mb-40">
-          <h1 className="text-gray-300 flex justify-start px-4 py-2 text-6xl font-serif">
+          <h1 className="text-white flex justify-start px-4 py-2 text-6xl font-serif">
             RSVP
           </h1>
           <div className="px-4 mb-6">

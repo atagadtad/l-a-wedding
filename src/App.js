@@ -166,26 +166,26 @@ const Menu = ({ setShowMenu }) => {
         <ul className="h-auto flex items-center bg-green-700">
           <div className="container justify-evenly">
             <li
-              onClick={() => setShowMenu(false)}
+              // onClick={() => setShowMenu(false)}
               className="flex justify-center text-white text-2xl font-serif"
             >
               <Link to="/">Home</Link>
             </li>
             <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 flex justify-center text-2xl font-serif"
+              className="text-gray-900 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/our-story">Our Story</Link>
             </li>
             <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 flex justify-center text-2xl font-serif"
+              className="text-gray-900 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/travel-stay">{"Travel & Stay"}</Link>
             </li>
             <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 flex justify-center text-2xl font-serif"
+              className="text-gray-900 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/rsvp">RSVP</Link>
             </li>
@@ -229,25 +229,25 @@ const DesktopMenu = ({ setShowMenu }) => {
         <div className="flex justify-evenly">
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center text-white hover:text-gray-900 text-2xl font-serif"
+            className="flex justify-center transition duration-100 ease-in-out text-white hover:text-gray-900 text-2xl font-serif"
           >
             <Link to="/">Home</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center hover:text-white text-2xl font-serif"
+            className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white text-2xl font-serif"
           >
             <Link to="/our-story">Our Story</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center hover:text-white  text-2xl font-serif"
+            className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
           >
             <Link to="/travel-stay">{"Travel & Stay"}</Link>
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center hover:text-white  text-2xl font-serif"
+            className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
           >
             <Link to="/rsvp">RSVP</Link>
           </li>

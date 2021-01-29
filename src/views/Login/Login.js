@@ -57,7 +57,7 @@ const Login = () => {
       <div className="px-4 py-8 flex justify-center">
         <button
           onClick={login}
-          className="uppercase border focus:outline-none focus:bg-white focus:text-green-700 tracking-widest text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+          className="uppercase border focus:outline-none  hover:bg-white hover:text-green-700 focus:bg-white focus:text-green-700 tracking-widest text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
         >
           LOGIN
         </button>

@@ -38,7 +38,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
         onClick={() => setShowForm(!showForm)}
         class="absolute h-screen inset-0 bg-gray-700 opacity-60"
       ></div>
-      <div className="h-screen md:my-8 md:h-auto md:max-w-xl md:mx-auto pt-6 overflow-hidden absolute inset-0 bg-gray-100">
+      <div className="h-screen rounded-md md:my-8 md:h-auto md:max-w-xl md:mx-auto pt-6 overflow-hidden absolute inset-0 bg-gray-100">
         <div className="py-3 flex w-screen justify-space-between items-start">
           <div className="mx-6">
             <h1 className="text-gray-800 font-semibold text-lg">

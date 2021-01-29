@@ -4,7 +4,7 @@ const RSVP = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
-    <div className="sm:container h-auto  bg-green-700">
+    <div className="h-auto  bg-green-700">
       <div className="pt-16 h-full flex items-center">
         <div className="w-screen mb-40">
           <h1 className="text-white flex justify-start px-4 py-2 text-6xl font-serif">
@@ -33,52 +33,58 @@ const RSVP = () => {
 
 const RSVPForm = ({ showForm, setShowForm }) => {
   return (
-    <div className="h-screen pt-6 overflow-hidden absolute inset-0 bg-gray-100">
-      <div className="py-3 flex w-screen justify-space-between items-start">
-        <div className="mx-6">
-          <h1 className="text-gray-800 font-semibold text-lg">
-            RSVP for Lelaine & Aaron's Wedding
-          </h1>
+    <>
+      <div
+        onClick={() => setShowForm(!showForm)}
+        class="absolute h-screen inset-0 bg-gray-700 opacity-60"
+      ></div>
+      <div className="h-screen md:my-8 md:h-auto md:max-w-xl md:mx-auto pt-6 overflow-hidden absolute inset-0 bg-gray-100">
+        <div className="py-3 flex w-screen justify-space-between items-start">
+          <div className="mx-6">
+            <h1 className="text-gray-800 font-semibold text-lg">
+              RSVP for Lelaine & Aaron's Wedding
+            </h1>
+          </div>
+          <CloseFormButton showForm={showForm} setShowForm={setShowForm} />
         </div>
-        <CloseFormButton showForm={showForm} setShowForm={setShowForm} />
-      </div>
-      <div className="h-full mx-6">
-        <h1 className="text-gray-800 mb-3">Name: *</h1>
-        <div className="flex justify-evenly">
-          <input
-            placeholder="First Name"
-            className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block  appearance-none leading-normal"
-          />
-          <input
-            placeholder="Last Name"
-            className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block appearance-none leading-normal"
-          />
-        </div>
-        <h1 className="text-gray-800 mt-6 mb-3">Email: *</h1>
-        <div className="flex">
-          <input
-            placeholder="Email"
-            className="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-          />
-        </div>
+        <div className="h-full mx-6">
+          <h1 className="text-gray-800 mb-3">Name: *</h1>
+          <div className="flex justify-between">
+            <input
+              placeholder="First Name"
+              className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block  appearance-none leading-normal"
+            />
+            <input
+              placeholder="Last Name"
+              className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block appearance-none leading-normal"
+            />
+          </div>
+          <h1 className="text-gray-800 mt-6 mb-3">Email: *</h1>
+          <div className="flex">
+            <input
+              placeholder="Email"
+              className="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+            />
+          </div>
 
-        <h1 className="text-gray-800 mt-6 mb-1">Will you be attending? *</h1>
-        <div className="md:flex md:items-center mb-1">
-          <div className="md:w-1/3"></div>
-          <label className="md:w-2/3 block text-gray-500 font-bold">
-            <input className="mr-2 leading-tight" type="checkbox" />
-            <span className="text-sm">Yes</span>
-          </label>
-        </div>
-        <div className="md:flex md:items-center mb-6">
-          <div className="md:w-1/3"></div>
-          <label className="md:w-2/3 block text-gray-500 font-bold">
-            <input className="mr-2 leading-tight" type="checkbox" />
-            <span className="text-sm">No</span>
-          </label>
+          <h1 className="text-gray-800 mt-6 mb-1">Will you be attending? *</h1>
+          <div className="md:flex md:items-center mb-1">
+            <div className="md:w-1/3"></div>
+            <label className="md:w-2/3 block text-gray-500 font-bold">
+              <input className="mr-2 leading-tight" type="checkbox" />
+              <span className="text-sm">Yes</span>
+            </label>
+          </div>
+          <div className="md:flex md:items-center mb-6">
+            <div className="md:w-1/3"></div>
+            <label className="md:w-2/3 block text-gray-500 font-bold">
+              <input className="mr-2 leading-tight" type="checkbox" />
+              <span className="text-sm">No</span>
+            </label>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

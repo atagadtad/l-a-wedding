@@ -12,8 +12,10 @@ const Login = () => {
   const auth = useAuth();
 
   const [password, setPassword] = useState("");
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   const login = () => {
+    setIsLoggingIn(true);
     fetch(PUBLIC_LOGIN, {
       method: "POST",
       headers: {
@@ -26,13 +28,18 @@ const Login = () => {
     })
       .then((response) => parseResponse(response))
       .then((result) => {
+        if (result.status !== 200) setIsLoggingIn(false);
         handleResponse(result, () => {
           auth.signin(() => {
+            setIsLoggingIn(false);
             history.push("/");
           });
         });
       })
-      .catch((err) => console.log({ err }));
+      .catch((err) => {
+        setIsLoggingIn(false);
+        console.log({ err });
+      });
   };
 
   return (
@@ -50,16 +57,30 @@ const Login = () => {
             }
           }}
           placeholder="Password"
-          className="bg-white mt-4 max-w-lg font-serif focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
+          className="bg-white shadow-2xl mt-4 max-w-lg font-serif border-transparent focus:ring-2 focus:ring-gray-300 focus:outline-none rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="password"
         />
       </div>
       <div className="px-4 py-8 flex justify-center">
         <button
           onClick={login}
-          className="uppercase border focus:outline-none  hover:bg-white hover:text-green-700 focus:bg-white focus:text-green-700 tracking-widest text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+          className="uppercase border tracking-widest hover:bg-gray-300 hover:text-gray-500 hover:border-gray-300 focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
         >
-          LOGIN
+          {isLoggingIn ? (
+            <svg class="animate-spin h-5 w-5 mx-3" viewBox="0 0 24 24">
+              <circle
+                className="bg-white"
+                stroke="white"
+                strokeWidth="4"
+                fill="transparent"
+                r="52"
+                cx="60"
+                cy="60"
+              />
+            </svg>
+          ) : (
+            "LOGIN"
+          )}
         </button>
       </div>
     </div>

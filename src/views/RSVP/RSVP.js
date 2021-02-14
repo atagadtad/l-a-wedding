@@ -36,10 +36,10 @@ const RSVPForm = ({ showForm, setShowForm }) => {
     <>
       <div
         onClick={() => setShowForm(!showForm)}
-        class="absolute h-screen inset-0 bg-gray-700 opacity-60"
+        class="absolute h-auto inset-0 bg-gray-700 opacity-60"
       ></div>
-      <div className="h-screen rounded-md md:my-8 md:h-auto md:max-w-xl md:mx-auto pt-6 overflow-hidden absolute inset-0 bg-gray-100">
-        <div className="my-3 mx-6 flex justify-between">
+      <div className="h-auto rounded-md md:my-8 md:h-auto md:max-w-xl md:mx-auto pt-6 overflow-hidden absolute inset-0 bg-gray-100">
+        <div className="my-3 mx-10 flex justify-between">
           <div className="">
             <h1 className="text-gray-800 font-semibold text-lg">
               RSVP for Lelaine & Aaron's Wedding
@@ -47,40 +47,90 @@ const RSVPForm = ({ showForm, setShowForm }) => {
           </div>
           <CloseFormButton showForm={showForm} setShowForm={setShowForm} />
         </div>
-        <div className="h-full mx-6">
-          <h1 className="text-gray-800 mb-3">Name: *</h1>
-          <div className="flex justify-between">
-            <input
-              placeholder="First Name"
-              className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block  appearance-none leading-normal"
-            />
-            <input
-              placeholder="Last Name"
-              className="bg-white w-40 focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block appearance-none leading-normal"
-            />
-          </div>
-          <h1 className="text-gray-800 mt-6 mb-3">Email: *</h1>
-          <div className="flex">
-            <input
-              placeholder="Email"
-              className="bg-white focus:outline-none border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-            />
-          </div>
+        <div className="h-auto mx-6">
+          <div class="container mx-auto mt-8">
+            <div class="mt-10 sm:mt-0">
+              <div class="mt-5 px-4 md:mt-0 md:col-span-2">
+                <div class="shadow overflow-hidden sm:rounded-md">
+                  <div class="px-4 py-5 bg-gray-100 sm:p-6">
+                    <div class="grid grid-cols-6 gap-6">
+                      <div class="col-span-6 sm:col-span-3">
+                        <label
+                          for="first_name"
+                          class="block text-sm font-medium text-gray-700"
+                        >
+                          First name
+                        </label>
+                        <input
+                          type="text"
+                          name="first_name"
+                          id="first_name"
+                          autocomplete="given-name"
+                          class="mt-1 form-input focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
 
-          <h1 className="text-gray-800 mt-6 mb-1">Will you be attending? *</h1>
-          <div className="md:flex md:items-center mb-1">
-            <div className="md:w-1/3"></div>
-            <label className="md:w-2/3 block text-gray-500 font-bold">
-              <input className="mr-2 leading-tight" type="checkbox" />
-              <span className="text-sm">Yes</span>
-            </label>
-          </div>
-          <div className="md:flex md:items-center mb-6">
-            <div className="md:w-1/3"></div>
-            <label className="md:w-2/3 block text-gray-500 font-bold">
-              <input className="mr-2 leading-tight" type="checkbox" />
-              <span className="text-sm">No</span>
-            </label>
+                      <div class="col-span-6 sm:col-span-3">
+                        <label
+                          for="last_name"
+                          class="block text-sm font-medium text-gray-700"
+                        >
+                          Last name
+                        </label>
+                        <input
+                          type="text"
+                          name="last_name"
+                          id="last_name"
+                          autocomplete="family-name"
+                          class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
+
+                      <div class="col-span-6 sm:col-span-4">
+                        <label
+                          for="email"
+                          class="block text-sm font-medium text-gray-700"
+                        >
+                          Email address
+                        </label>
+                        <input
+                          type="text"
+                          name="email"
+                          id="email"
+                          autocomplete="email"
+                          class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
+
+                      <div class="col-span-6 sm:col-span-3">
+                        <label
+                          for="rsvp"
+                          class="block text-sm font-medium text-gray-700"
+                        >
+                          Will you be attending?
+                        </label>
+                        <select
+                          id="rsvp"
+                          name="rsvp"
+                          class="mt-1 block form-select w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        >
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <button
+                      type="submit"
+                      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                 <div class="col-span-6 sm:col-span-3">
                   <label
                     for="first_name"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-bold font-serif tracking-wider text-black"
                   >
                     First Name
                   </label>
@@ -77,14 +77,14 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                     name="first_name"
                     id="first_name"
                     autocomplete="given-name"
-                    class="mt-1 form-input focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    class="mt-1 form-input block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
 
                 <div class="col-span-6 sm:col-span-3">
                   <label
                     for="last_name"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-bold font-serif tracking-wider text-black"
                   >
                     Last Name
                   </label>
@@ -93,14 +93,14 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                     name="last_name"
                     id="last_name"
                     autocomplete="family-name"
-                    class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    class="mt-1 form-input block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
 
                 <div class="col-span-6 sm:col-span-4">
                   <label
                     for="email"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-bold font-serif tracking-wider text-black"
                   >
                     Email Address
                   </label>
@@ -116,7 +116,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                 <div class="col-span-6 sm:col-span-3">
                   <label
                     for="rsvp"
-                    class="block text-sm font-medium text-gray-700"
+                    class="block text-sm font-bold font-serif tracking-wider text-black"
                   >
                     Will you be attending?
                   </label>
@@ -134,7 +134,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
             <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
               <button
                 type="submit"
-                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700"
+                class="inline-flex transition duration-500 ease-in-out justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-white hover:text-green-700 hover:border-green-700 focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-green-700"
               >
                 Save
               </button>

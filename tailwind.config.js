@@ -27,6 +27,8 @@ module.exports = {
     extend: {
       fontFamily: {
         serif: ["Mirage"],
+        sans: ["Quattrocento Sans"],
+        mono: ["Coldiac"],
       },
     },
     screens: {

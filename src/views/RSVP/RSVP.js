@@ -33,108 +33,116 @@ const RSVP = () => {
 
 const RSVPForm = ({ showForm, setShowForm }) => {
   return (
-    <>
-      <div
-        onClick={() => setShowForm(!showForm)}
-        class="absolute h-auto inset-0 bg-gray-700 opacity-60"
-      ></div>
-      <div className="h-auto rounded-md md:my-8 md:h-auto md:max-w-xl md:mx-auto pt-6 overflow-hidden absolute inset-0 bg-gray-100">
-        <div className="my-3 mx-10 flex justify-between">
-          <div className="">
-            <h1 className="text-gray-800 font-semibold text-lg">
-              RSVP for Lelaine & Aaron's Wedding
-            </h1>
-          </div>
-          <CloseFormButton showForm={showForm} setShowForm={setShowForm} />
+    <div class="fixed z-10 inset-0 overflow-y-auto">
+      <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+          <div
+            onClick={() => setShowForm(!showForm)}
+            class="absolute inset-0 bg-gray-500 opacity-75"
+          ></div>
         </div>
-        <div className="h-auto mx-6">
-          <div class="container mx-auto mt-8">
-            <div class="mt-10 sm:mt-0">
-              <div class="mt-5 px-4 md:mt-0 md:col-span-2">
-                <div class="shadow overflow-hidden sm:rounded-md">
-                  <div class="px-4 py-5 bg-gray-100 sm:p-6">
-                    <div class="grid grid-cols-6 gap-6">
-                      <div class="col-span-6 sm:col-span-3">
-                        <label
-                          for="first_name"
-                          class="block text-sm font-medium text-gray-700"
-                        >
-                          First name
-                        </label>
-                        <input
-                          type="text"
-                          name="first_name"
-                          id="first_name"
-                          autocomplete="given-name"
-                          class="mt-1 form-input focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                        />
-                      </div>
 
-                      <div class="col-span-6 sm:col-span-3">
-                        <label
-                          for="last_name"
-                          class="block text-sm font-medium text-gray-700"
-                        >
-                          Last name
-                        </label>
-                        <input
-                          type="text"
-                          name="last_name"
-                          id="last_name"
-                          autocomplete="family-name"
-                          class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                        />
-                      </div>
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+        >
+          &#8203;
+        </span>
 
-                      <div class="col-span-6 sm:col-span-4">
-                        <label
-                          for="email"
-                          class="block text-sm font-medium text-gray-700"
-                        >
-                          Email address
-                        </label>
-                        <input
-                          type="text"
-                          name="email"
-                          id="email"
-                          autocomplete="email"
-                          class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-                        />
-                      </div>
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-headline"
+        >
+          <div class="shadow overflow-hidden sm:rounded-md">
+            <div class="px-4 py-5 bg-gray-100 sm:p-6">
+              <div class="grid grid-cols-6 gap-6">
+                <div class="col-span-6 flex justify-end">
+                  <CloseFormButton
+                    showForm={showForm}
+                    setShowForm={setShowForm}
+                  />
+                </div>
 
-                      <div class="col-span-6 sm:col-span-3">
-                        <label
-                          for="rsvp"
-                          class="block text-sm font-medium text-gray-700"
-                        >
-                          Will you be attending?
-                        </label>
-                        <select
-                          id="rsvp"
-                          name="rsvp"
-                          class="mt-1 block form-select w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        >
-                          <option>Yes</option>
-                          <option>No</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                    <button
-                      type="submit"
-                      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700"
-                    >
-                      Save
-                    </button>
-                  </div>
+                <div class="col-span-6 sm:col-span-3">
+                  <label
+                    for="first_name"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    First name
+                  </label>
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    autocomplete="given-name"
+                    class="mt-1 form-input focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label
+                    for="last_name"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Last name
+                  </label>
+                  <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    autocomplete="family-name"
+                    class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div class="col-span-6 sm:col-span-4">
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Email address
+                  </label>
+                  <input
+                    type="text"
+                    name="email"
+                    id="email"
+                    autocomplete="email"
+                    class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                  />
+                </div>
+
+                <div class="col-span-6 sm:col-span-3">
+                  <label
+                    for="rsvp"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                    Will you be attending?
+                  </label>
+                  <select
+                    id="rsvp"
+                    name="rsvp"
+                    class="mt-1 block form-select w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                  >
+                    <option>Yes</option>
+                    <option>No</option>
+                  </select>
                 </div>
               </div>
+            </div>
+            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <button
+                type="submit"
+                class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-700"
+              >
+                Save
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

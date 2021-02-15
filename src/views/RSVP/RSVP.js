@@ -70,7 +70,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                     for="first_name"
                     class="block text-sm font-medium text-gray-700"
                   >
-                    First name
+                    First Name
                   </label>
                   <input
                     type="text"
@@ -86,7 +86,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                     for="last_name"
                     class="block text-sm font-medium text-gray-700"
                   >
-                    Last name
+                    Last Name
                   </label>
                   <input
                     type="text"
@@ -102,14 +102,14 @@ const RSVPForm = ({ showForm, setShowForm }) => {
                     for="email"
                     class="block text-sm font-medium text-gray-700"
                   >
-                    Email address
+                    Email Address
                   </label>
                   <input
                     type="text"
                     name="email"
                     id="email"
                     autocomplete="email"
-                    class="mt-1 focus:ring-indigo-500 form-input focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                    class="form-input mt-1  block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                   />
                 </div>
 
@@ -149,7 +149,7 @@ const RSVPForm = ({ showForm, setShowForm }) => {
 const CloseFormButton = ({ showForm, setShowForm }) => {
   return (
     <button
-      // className="flex mx-10 items-center py-2  text-teal-200 border-teal-400 hover:text-white hover:border-white"
+      className="hover:text-white hover:border-white"
       onClick={() => setShowForm(!showForm)}
     >
       <svg

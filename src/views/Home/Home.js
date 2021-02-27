@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="container md:mt-12 overscroll-auto bg-green-700">
       <div>
-        <p className="text-white hidden font-serf md:flex justify-start items-center px-8 py-2 text-6xl uppercase leading-snug">
+        <p className="text-white hidden font-serif md:flex justify-start items-center px-8 py-2 text-6xl uppercase leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying The Knot
         </p>
         <p className="text-white flex font-serif md:hidden justify-start items-center px-8 py-2 text-6xl uppercase leading-snug">

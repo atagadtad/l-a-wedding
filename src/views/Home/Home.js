@@ -29,24 +29,14 @@ const Home = () => {
             textAlign="LEFT"
             header="Ceremony & Reception"
             location="Crystal Ballroom"
-            details={[
-              "The Walper Hotel",
-              "20 Queen St South",
-              "Kitchener, ON",
-              "4:00 PM",
-            ]}
+            details={["The Walper Hotel", "20 Queen St South", "Kitchener, ON"]}
           />
 
           <LocationDetails
             textAlign="LEFT"
             header="Cocktails"
             location="Lokal Lounge"
-            details={[
-              "The Walper Hotel",
-              "20 Queen St South",
-              "Kitchener, ON",
-              "5:00 PM - 11 PM",
-            ]}
+            details={["The Walper Hotel", "20 Queen St South", "Kitchener, ON"]}
           />
           {/* <div className="flex justify-start px-4 mt-12 md:hidden lg:flex">
             <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />

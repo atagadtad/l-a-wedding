@@ -9,7 +9,15 @@ const TravelStay = () => {
           {"Travel & Stay"}
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 my-12">
+          <div className="mx-6 lg:hidden">
+            <img
+              className="object-contain rounded-md shadow-md"
+              alt="WALPER"
+              src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/walper.jpg"
+            />
+          </div>
+
           <div className="flex flex-col mx-6 items-center">
             <div className="w-full flex justify-end"></div>
 
@@ -17,7 +25,7 @@ const TravelStay = () => {
               showWalperLink={true}
               textAlign="RIGHT"
               header="Ceremony & Reception"
-              details={["20 Queen St South", "Kitchener, ON", "4:00 PM"]}
+              details={["20 Queen St South", "Kitchener, ON"]}
             />
 
             <div class="my-8 flex w-full justify-end">
@@ -25,7 +33,7 @@ const TravelStay = () => {
             </div>
           </div>
 
-          <div className="mx-6">
+          <div className="mx-6 hidden lg:block">
             <img
               className="object-contain rounded-md shadow-md"
               alt="WALPER"

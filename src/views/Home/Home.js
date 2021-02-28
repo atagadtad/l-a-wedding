@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import LocationDetails from "../../components/LocationDetails";
 
 // Custom Components
 import Text from "../../components/Text";
@@ -25,6 +26,7 @@ const Home = () => {
       <div className="flex-row px-4 md:grid md:grid-cols-2">
         <div className="flex flex-col justify-between lg:justify-center">
           <LocationDetails
+            textAlign="LEFT"
             header="Ceremony & Reception"
             location="Crystal Ballroom"
             details={[
@@ -36,6 +38,7 @@ const Home = () => {
           />
 
           <LocationDetails
+            textAlign="LEFT"
             header="Cocktails"
             location="Lokal Lounge"
             details={[
@@ -94,29 +97,6 @@ const handleWidth = () => {
   }
 
   return result;
-};
-
-const LocationDetails = ({ header, location, details }) => {
-  const mapDetails = details.map((string, index) => (
-    <p key={index} className="text-white tracking-wide px-4 text-xl font-serif">
-      {string}
-    </p>
-  ));
-  return (
-    <div className="flex-col">
-      <div>
-        <h1 className="text-xl tracking-wider font-serif uppercase px-4 pt-12">
-          {header}
-        </h1>
-      </div>
-      <div>
-        <h1 className="text-white py-8 px-4 text-xl tracking-wider font-serif">
-          {location}
-        </h1>
-      </div>
-      <div>{mapDetails}</div>
-    </div>
-  );
 };
 
 const LAButton = ({ buttonText, navigatesTo }) => {

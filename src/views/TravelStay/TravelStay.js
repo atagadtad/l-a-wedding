@@ -1,4 +1,5 @@
 import React from "react";
+import LocationDetails from "../../components/LocationDetails";
 
 const TravelStay = () => {
   return (
@@ -8,17 +9,22 @@ const TravelStay = () => {
           {"Travel & Stay"}
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
-          <div className="flex mx-6 justify-center items-center">
-            <a
-              rel="noreferrer"
-              target="_blank"
-              className="underline font-serif text-xl text-white transition hover:text-gray-900"
-              href="https://www.walper.com/"
-            >
-              The Walper Hotel
-            </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-12">
+          <div className="flex flex-col mx-6 items-center">
+            <div className="w-full flex justify-end"></div>
+
+            <LocationDetails
+              showWalperLink={true}
+              textAlign="RIGHT"
+              header="Ceremony & Reception"
+              details={["20 Queen St South", "Kitchener, ON", "4:00 PM"]}
+            />
+
+            <div class="my-8 flex w-full justify-end">
+              <p className="font-serif text-white">*more details to follow</p>
+            </div>
           </div>
+
           <div className="mx-6">
             <img
               className="object-contain rounded-md shadow-md"

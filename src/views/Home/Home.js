@@ -163,6 +163,7 @@ const CovidUpdate = () => {
             any changes to our wedding plans. In the meantime, please leave us
             your mailing address{" "}
             <a
+              rel="noreferrer"
               target="_blank"
               className="underline font-bold transition hover:text-gray-900"
               href="https://server.l-a-wedding.net/form/create"

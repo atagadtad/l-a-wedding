@@ -9,6 +9,7 @@ const TravelStay = () => {
         </h1>
         <div className="flex justify-center my-4">
           <a
+            rel="noreferrer"
             target="_blank"
             className="underline font-serif text-xl text-white transition hover:text-gray-900"
             href="https://www.walper.com/"

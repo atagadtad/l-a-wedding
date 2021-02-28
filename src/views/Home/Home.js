@@ -25,15 +25,25 @@ const Home = () => {
       <div className="flex-row px-4 md:grid md:grid-cols-2">
         <div className="flex flex-col justify-between lg:justify-center">
           <LocationDetails
-            header="Ceremony"
+            header="Ceremony & Reception"
             location="Crystal Ballroom"
-            details={["20 Queen St South", "Kitchener, ON", "4:00 PM"]}
+            details={[
+              "The Walper Hotel",
+              "20 Queen St South",
+              "Kitchener, ON",
+              "4:00 PM",
+            ]}
           />
 
           <LocationDetails
-            header="Reception"
-            location="Oak Lobby"
-            details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
+            header="Cocktails"
+            location="Lokal Lounge"
+            details={[
+              "The Walper Hotel",
+              "20 Queen St South",
+              "Kitchener, ON",
+              "5:00 PM - 11 PM",
+            ]}
           />
           {/* <div className="flex justify-start px-4 mt-12 md:hidden lg:flex">
             <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
@@ -137,7 +147,7 @@ const CovidUpdate = () => {
         <WhiteDivider />
       </div>
 
-      <div class="shadow-lg px-2 py-2 rounded-md">
+      <div className="shadow-lg px-2 py-2 rounded-md">
         <div className="mb-4">
           <Text>Dear Friends and Family,</Text>
         </div>
@@ -153,7 +163,8 @@ const CovidUpdate = () => {
             any changes to our wedding plans. In the meantime, please leave us
             your mailing address{" "}
             <a
-              class="underline font-bold "
+              target="_blank"
+              className="underline font-bold transition hover:text-gray-900"
               href="https://server.l-a-wedding.net/form/create"
             >
               HERE
@@ -161,9 +172,19 @@ const CovidUpdate = () => {
             so we can proceed with sending you our invites.
           </Text>
         </div>
+
+        <div className="my-4">
+          <Text>
+            We will add more details to the site in the next few weeks so you
+            can plan your travel and stay. It will include a wedding block code
+            should you choose to stay at the Walper. There are a lot of places
+            to explore around the area, we're excited to share them with you!
+          </Text>
+        </div>
+
         <Text>
-          Please join us in prayer that we may be able to celebrate with you all
-          in person in August! Be well!
+          Please continue to join us in prayer that we may be able to celebrate
+          with you all in person in August! Be well!
         </Text>
         <div className="mt-4 mb-2">
           <Text>Love,</Text>

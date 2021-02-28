@@ -7,6 +7,15 @@ const TravelStay = () => {
         <h1 className="text-white flex justify-center items-center px-4 py-2 text-6xl font-serif">
           {"Travel & Stay"}
         </h1>
+        <div className="flex justify-center my-4">
+          <a
+            target="_blank"
+            className="underline font-serif text-xl text-white transition hover:text-gray-900"
+            href="https://www.walper.com/"
+          >
+            The Walper Hotel
+          </a>
+        </div>
       </div>
     </div>
   );

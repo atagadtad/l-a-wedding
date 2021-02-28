@@ -18,7 +18,7 @@ const Home = () => {
           Lelaine <br /> & Aaron <br /> Are Tying <br /> The Knot
         </p>
       </div>
-      <div className="pt-4">
+      <div className="pt-4 ">
         <CovidUpdate />
       </div>
 
@@ -35,9 +35,9 @@ const Home = () => {
             location="Oak Lobby"
             details={["20 Queen St South", "Kitchener, ON", "5:00 PM - 11 PM"]}
           />
-          <div className="flex justify-start px-4 mt-12 md:hidden lg:flex">
+          {/* <div className="flex justify-start px-4 mt-12 md:hidden lg:flex">
             <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
-          </div>
+          </div> */}
         </div>
 
         <div className="px-4 mt-6">
@@ -132,7 +132,7 @@ const WhiteDivider = () => {
 
 const CovidUpdate = () => {
   return (
-    <div className="px-8">
+    <div className="px-8 ">
       <div className="my-4">
         <WhiteDivider />
       </div>
@@ -143,19 +143,27 @@ const CovidUpdate = () => {
         </div>
         <Text>
           We are so excited to celebrate our wedding with you! We know the last
-          few months (year!) have been a roller coaster ride for most of us but
-          we are believing in God’s best despite the pandemic.
+          year has been a roller coaster ride but we are believing that God has
+          the best in store.
         </Text>
         <div className="my-4">
           <Text>
-            We will keep you updated via this website for any wedding plan
-            changes. We are keeping a close eye on government restrictions here
-            and also abroad.
+            We are keeping a close eye on government restrictions here in Canada
+            and also abroad. We will keep you updated on this website regarding
+            any changes to our wedding plans. In the meantime, please leave us
+            your mailing address{" "}
+            <a
+              class="underline font-bold "
+              href="https://server.l-a-wedding.net/form/create"
+            >
+              HERE
+            </a>{" "}
+            so we can proceed with sending you our invites.
           </Text>
         </div>
         <Text>
           Please join us in prayer that we may be able to celebrate with you all
-          in August!
+          in person in August! Be well!
         </Text>
         <div className="mt-4 mb-2">
           <Text>Love,</Text>

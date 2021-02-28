@@ -12,8 +12,8 @@ import {
 
 // Custom Components
 import Home from "./views/Home/Home";
-import OurStory from "./views/OurStory/OurStory";
-import RSVP from "./views/RSVP/RSVP";
+// import OurStory from "./views/OurStory/OurStory";
+// import RSVP from "./views/RSVP/RSVP";
 import TravelStay from "./views/TravelStay/TravelStay";
 import Login from "./views/Login/Login";
 
@@ -35,8 +35,6 @@ const fakeAuth = {
     setTimeout(cb, 0);
   },
 };
-
-// const authContext = createContext();
 
 function useProvideAuth() {
   const [user, setUser] = useState(null);
@@ -68,22 +66,16 @@ function ProvideAuth({ children }) {
   return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
 
-// function useAuth() {
-//   return useContext(authContext);
-// }
-
 /** END AUTH hooks **/
 
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  // const auth = useAuth();
   const session = sessionStorage.getItem("user");
   return (
     <Route
       {...rest}
       render={({ location }) =>
-        // auth.user ? (
         session === "true" ? (
           children
         ) : (
@@ -116,16 +108,16 @@ export default function App() {
                   <Route path="/login">
                     <Login />
                   </Route>
-                  <PrivateRoute path="/our-story">
+                  {/* <PrivateRoute path="/our-story">
                     <OurStory />
-                  </PrivateRoute>
+                  </PrivateRoute> */}
                   <PrivateRoute path="/travel-stay">
                     <TravelStay />
                   </PrivateRoute>
 
-                  <PrivateRoute path="/rsvp">
+                  {/* <PrivateRoute path="/rsvp">
                     <RSVP />
-                  </PrivateRoute>
+                  </PrivateRoute> */}
                   <PrivateRoute path="/">
                     <Home />
                   </PrivateRoute>
@@ -161,34 +153,31 @@ const MenuButton = ({ showMenu, setShowMenu }) => {
 
 const Menu = ({ setShowMenu }) => {
   return (
-    <div className="flex flex-col h-64 justify-end">
+    <div className="flex flex-col h-64 justify-end overflow-auto">
       <nav>
         <ul className="h-auto flex items-center bg-green-700">
           <div className="container justify-evenly">
-            <li
-              // onClick={() => setShowMenu(false)}
-              className="flex justify-center text-white text-2xl font-serif"
-            >
+            <li className="flex my-2 justify-center text-white text-2xl font-serif">
               <Link to="/">Home</Link>
             </li>
-            <li
+            {/* <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 flex justify-center focus:text-white text-2xl font-serif"
+              className="text-gray-900 my-2 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/our-story">Our Story</Link>
-            </li>
+            </li> */}
             <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 flex justify-center focus:text-white text-2xl font-serif"
+              className="text-gray-900 my-2 flex justify-center focus:text-white text-2xl font-serif"
             >
-              <Link to="/travel-stay">{"Travel & Stay"}</Link>
+              <Link to="/travel-stay">Travel & Stay</Link>
             </li>
-            <li
+            {/* <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 flex justify-center focus:text-white text-2xl font-serif"
+              className="text-gray-900 my-2 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/rsvp">RSVP</Link>
-            </li>
+            </li> */}
           </div>
         </ul>
       </nav>
@@ -226,31 +215,31 @@ const DesktopMenu = ({ setShowMenu }) => {
   return (
     <nav className="invisible lg:visible w-1/2 xl:w-1/3">
       <ul className="">
-        <div className="flex justify-evenly">
+        <div className="flex justify-end">
           <li
             onClick={() => setShowMenu(false)}
-            className="flex justify-center transition duration-100 ease-in-out text-white hover:text-gray-900 text-2xl font-serif"
+            className="mx-2 flex justify-center transition duration-100 ease-in-out text-white hover:text-gray-900 text-2xl font-serif"
           >
             <Link to="/">Home</Link>
           </li>
-          <li
+          {/* <li
             onClick={() => setShowMenu(false)}
             className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white text-2xl font-serif"
           >
             <Link to="/our-story">Our Story</Link>
-          </li>
+          </li>  */}
           <li
             onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
+            className=" mx-2 text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
           >
-            <Link to="/travel-stay">{"Travel & Stay"}</Link>
+            <Link to="/travel-stay">Travel & Stay</Link>
           </li>
-          <li
+          {/* <li
             onClick={() => setShowMenu(false)}
             className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
           >
             <Link to="/rsvp">RSVP</Link>
-          </li>
+          </li> */}
         </div>
       </ul>
     </nav>

@@ -553,29 +553,35 @@ video {
 }
 
 @font-face {
-  font-family: 'Quattrocento Sans';
+  font-family: "Quattrocento Sans";
 
   font-style: normal;
 
   font-weight: 400;
 
-  src: url('./fonts/quattrocento-sans-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: url("./fonts/quattrocento-sans-v13-latin-regular.eot"); /* IE9 Compat Modes */
 
-  src: local('Quattrocento Sans'),
-       url('./fonts/quattrocento-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/quattrocento-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/quattrocento-sans-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/quattrocento-sans-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/quattrocento-sans-v13-latin-regular.svg#QuattrocentoSans') format('svg'); /* Legacy iOS */
+  src: local("Quattrocento Sans"),
+      url("./fonts/quattrocento-sans-v13-latin-regular.eot?#iefix")
+        format("embedded-opentype"),
+      /* IE6-IE8 */ url("./fonts/quattrocento-sans-v13-latin-regular.woff2")
+        format("woff2"),
+      /* Super Modern Browsers */
+        url("./fonts/quattrocento-sans-v13-latin-regular.woff") format("woff"),
+      /* Modern Browsers */
+        url("./fonts/quattrocento-sans-v13-latin-regular.ttf")
+        format("truetype"),
+      /* Safari, Android, iOS */
+        url("./fonts/quattrocento-sans-v13-latin-regular.svg#QuattrocentoSans")
+        format("svg"); /* Legacy iOS */
 }
 
 @font-face {
-  font-family: 'Coldiac';
+  font-family: "Coldiac";
 
   font-style: normal;
 
-  src: local('Coldiac'),
-        url('./fonts/Coldiac.ttf') format('truetype')
+  src: local("Coldiac"), url("./fonts/Coldiac.ttf") format("truetype");
 }
 
 .container {
@@ -31356,6 +31362,10 @@ video {
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.underline {
+  text-underline-offset: 0.2em;
 }
 
 @media (min-width: 640px) {

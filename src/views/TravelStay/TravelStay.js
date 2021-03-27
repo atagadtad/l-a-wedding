@@ -49,6 +49,17 @@ const TravelStay = () => {
           Where to Stay
         </h3>
 
+        <div className="mt-4 flex justify-center">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            className="px-4 pt-6 block underline  font-serif text-2xl uppercase text-white transition hover:text-gray-900"
+            href="https://www.walper.com/"
+          >
+            The Walper Hotel
+          </a>
+        </div>
+
         <div class="my-8 px-4 flex w-full justify-center">
           <p className="font-serif text-white">
             Booking code for the Walper available, please let us know if you'd

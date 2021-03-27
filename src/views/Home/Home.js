@@ -117,7 +117,7 @@ const CovidUpdate = () => {
         <WhiteDivider />
       </div>
 
-      <div className="shadow-lg px-2 py-2 rounded-md">
+      <div className="px-2 py-2">
         <div className="mb-4">
           <Text>Dear Friends and Family,</Text>
         </div>

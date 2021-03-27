@@ -28,8 +28,8 @@ const TravelStay = () => {
               details={["20 Queen St South", "Kitchener, ON"]}
             />
 
-            <div class="my-8 flex w-full justify-end">
-              <p className="font-serif text-white">*more details to follow</p>
+            <div class="my-8 px-4 flex w-full justify-end">
+              <p className="font-serif text-white">More details to follow</p>
             </div>
           </div>
 

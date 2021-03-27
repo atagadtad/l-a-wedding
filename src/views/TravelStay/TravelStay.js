@@ -1,5 +1,8 @@
 import React from "react";
+
+// Custom Components
 import LocationDetails from "../../components/LocationDetails";
+import WhiteDivider from "../../components/WhiteDivider";
 
 const TravelStay = () => {
   return (
@@ -27,10 +30,6 @@ const TravelStay = () => {
               header="Ceremony & Reception"
               details={["20 Queen St South", "Kitchener, ON"]}
             />
-
-            <div class="my-8 px-4 flex w-full justify-end">
-              <p className="font-serif text-white">More details to follow</p>
-            </div>
           </div>
 
           <div className="mx-6 hidden lg:block">
@@ -40,6 +39,21 @@ const TravelStay = () => {
               src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/walper.jpg"
             />
           </div>
+        </div>
+      </div>
+
+      <div className="my-16">
+        <WhiteDivider />
+
+        <h3 className="text-white mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
+          Where to Stay
+        </h3>
+
+        <div class="my-8 px-4 flex w-full justify-center">
+          <p className="font-serif text-white">
+            Booking code for the Walper available, please let us know if you'd
+            like it in advance. Otherwise we will post it in May.
+          </p>
         </div>
       </div>
     </div>

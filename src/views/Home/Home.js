@@ -5,6 +5,7 @@ import LocationDetails from "../../components/LocationDetails";
 
 // Custom Components
 import Text from "../../components/Text";
+import WhiteDivider from "../../components/WhiteDivider";
 
 const Home = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -101,14 +102,14 @@ const LAButton = ({ buttonText, navigatesTo }) => {
   );
 };
 
-const WhiteDivider = () => {
-  return (
-    <div className="divide-y-2 divide-white">
-      <div></div>
-      <div></div>
-    </div>
-  );
-};
+// const WhiteDivider = () => {
+//   return (
+//     <div className="divide-y-2 divide-white">
+//       <div></div>
+//       <div></div>
+//     </div>
+//   );
+// };
 
 const CovidUpdate = () => {
   return (

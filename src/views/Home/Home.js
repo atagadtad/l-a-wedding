@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import LocationDetails from "../../components/LocationDetails";
 
@@ -61,10 +61,10 @@ const Home = () => {
           )}
         </div>
       </div>
-
+      {/* 
       <div className="px-8 hidden justify-center md:mt-10 md:flex lg:hidden ">
         <LAButton buttonText="I'll be there!" navigatesTo="/RSVP" />
-      </div>
+      </div> */}
 
       <div className="px-8 my-10">
         <WhiteDivider />
@@ -90,6 +90,7 @@ const handleWidth = () => {
   return result;
 };
 
+/*
 const LAButton = ({ buttonText, navigatesTo }) => {
   return (
     <div className="mt-5">
@@ -101,15 +102,7 @@ const LAButton = ({ buttonText, navigatesTo }) => {
     </div>
   );
 };
-
-// const WhiteDivider = () => {
-//   return (
-//     <div className="divide-y-2 divide-white">
-//       <div></div>
-//       <div></div>
-//     </div>
-//   );
-// };
+*/
 
 const CovidUpdate = () => {
   return (

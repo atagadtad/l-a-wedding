@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const LocationDetails = ({
   header,
   location,
   details,
   textAlign,
-  showWalperLink,
+  link,
+  linkText,
+  lowercaseHeader,
 }) => {
   const mapDetails = details.map((string, index) => (
     <p
@@ -18,6 +20,7 @@ const LocationDetails = ({
       {string}
     </p>
   ));
+
   return (
     <div className="flex-col w-full">
       <div
@@ -25,9 +28,15 @@ const LocationDetails = ({
           textAlign && textAlign === "LEFT" ? "justify-start" : "justify-end"
         }`}
       >
-        <h1 className="text-xl tracking-wider font-serif uppercase px-4 pt-12">
-          {header}
-        </h1>
+        {header && (
+          <h1
+            className={`text-xl tracking-wider font-serif  ${
+              lowercaseHeader ? "" : "uppercase"
+            } px-4 pt-12`}
+          >
+            {header}
+          </h1>
+        )}
       </div>
       <div
         className={`flex ${
@@ -41,14 +50,14 @@ const LocationDetails = ({
         >
           {location}
         </h1>
-        {showWalperLink && (
+        {link && linkText && (
           <a
             rel="noreferrer"
             target="_blank"
             className="px-4 pt-6 block underline  font-serif text-xl uppercase text-white transition hover:text-gray-900"
-            href="https://www.walper.com/"
+            href={link}
           >
-            The Walper Hotel
+            {linkText}
           </a>
         )}
       </div>

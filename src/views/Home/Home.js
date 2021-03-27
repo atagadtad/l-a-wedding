@@ -123,9 +123,9 @@ const CovidUpdate = () => {
         <div className="my-4">
           <Text>
             We are keeping a close eye on government restrictions here in Canada
-            and also abroad. We will keep you updated on this website regarding
-            any changes to our wedding plans. In the meantime, please leave us
-            your mailing address{" "}
+            and also abroad. We will keep you updated via email and this website
+            regarding any changes to our wedding plans. In the meantime, please
+            leave us your mailing address{" "}
             <a
               rel="noreferrer"
               target="_blank"
@@ -140,7 +140,7 @@ const CovidUpdate = () => {
 
         <div className="my-4">
           <Text>
-            We will add more details to the site in the next few weeks so you
+            We will add more details to the site in the upcoming months so you
             can plan your travel and stay. It will include a wedding block code
             should you choose to stay at the Walper. There are a lot of places
             to explore around the area, we're excited to share them with you!

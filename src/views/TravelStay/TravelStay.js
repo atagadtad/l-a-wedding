@@ -73,7 +73,8 @@ const TravelStay = () => {
         <div class="my-8 px-4 flex w-full justify-center">
           <p className="font-serif text-white">
             Booking code for the Walper available, please let us know if you'd
-            like it in advance. Otherwise we will post it in May.
+            like it in advance. We will post it in May once we've sent the
+            invites.
           </p>
         </div>
 
@@ -128,8 +129,8 @@ const TravelStay = () => {
         <div class="my-8 px-4 flex w-full justify-center">
           <p className="font-serif text-white">
             A great place to visit on a Saturday morning and it's only 15
-            minutes from the Walper! Make sure to grab some apple fritters
-            whilst you're there.
+            minutes from the Walper! Make sure to grab some apple fritters as
+            you walk around!
           </p>
         </div>
       </div>

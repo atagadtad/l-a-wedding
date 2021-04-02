@@ -52,7 +52,7 @@ const TravelStay = () => {
         </div>
       </div>
 
-      <div className="my-16">
+      <div className="mx-6 my-16">
         <WhiteDivider />
 
         <h3 className="text-white mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
@@ -90,7 +90,7 @@ const TravelStay = () => {
         </div>
       </div>
 
-      <div className="my-16">
+      <div className="mx-6 my-16">
         <WhiteDivider />
 
         <h3 className="text-white mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">

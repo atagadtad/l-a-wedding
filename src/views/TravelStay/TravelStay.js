@@ -55,7 +55,7 @@ const TravelStay = () => {
       <div className="mx-6 my-16">
         <WhiteDivider />
 
-        <h3 className="text-white mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
+        <h3 className="text-white text-center mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
           Where to Stay
         </h3>
 
@@ -71,7 +71,7 @@ const TravelStay = () => {
         </div>
 
         <div class="my-8 px-4 flex w-full justify-center">
-          <p className="font-serif text-white">
+          <p className="font-serif text-center text-white">
             Booking code for the Walper available, please let us know if you'd
             like it in advance. We will post it in May once we've sent the
             invites.
@@ -93,7 +93,7 @@ const TravelStay = () => {
       <div className="mx-6 my-16">
         <WhiteDivider />
 
-        <h3 className="text-white mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
+        <h3 className="text-white text-center mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
           Where to Roam
         </h3>
 
@@ -101,7 +101,7 @@ const TravelStay = () => {
           <a
             rel="noreferrer"
             target="_blank"
-            className="px-4 pt-6 block underline  font-serif text-2xl uppercase text-white transition hover:text-gray-900"
+            className="px-4 pt-6 block underline text-center font-serif text-2xl uppercase text-white transition hover:text-gray-900"
             href="https://goo.gl/maps/isdooqyht6JRkTgE9"
           >
             Around the Walper
@@ -109,7 +109,7 @@ const TravelStay = () => {
         </div>
 
         <div class="my-8 px-4 flex w-full justify-center">
-          <p className="font-serif text-white">
+          <p className="font-serif text-center text-white">
             We saved a list of places on Google maps for you to checkout whilst
             you stay in Kitchener.
           </p>
@@ -127,7 +127,7 @@ const TravelStay = () => {
         </div>
 
         <div class="my-8 px-4 flex w-full justify-center">
-          <p className="font-serif text-white">
+          <p className="font-serif text-center text-white">
             A great place to visit on a Saturday morning and it's only 15
             minutes from the Walper! Make sure to grab some apple fritters as
             you walk around!

@@ -31,7 +31,8 @@ const LocationDetails = ({
         {header && (
           <h1
             className={`text-xl tracking-wider font-serif  ${
-              lowercaseHeader ? "" : "uppercase"
+              (lowercaseHeader ? "" : "uppercase",
+              textAlign && textAlign === "RIGHT" ? "text-right" : "")
             } px-4 pt-12`}
           >
             {header}

@@ -13,19 +13,28 @@ const Home = () => {
   return (
     <div className="container md:mt-12 overscroll-auto bg-green-700">
       <div>
-        <p className="text-white hidden font-serif md:flex justify-start items-center px-8 py-2 text-6xl uppercase leading-snug">
+        <p className="text-white hidden font-serif font-thin md:flex justify-start items-center px-8 py-2 text-6xl md:text-8xl uppercase tracking-wide leading-snug">
           Lelaine <br /> & Aaron Are <br /> Tying The Knot
         </p>
-        <p className="text-white flex font-serif md:hidden justify-start items-center px-8 py-2 text-6xl uppercase leading-snug">
-          Lelaine <br /> & Aaron <br /> Are Tying <br /> The Knot
+        <p className="text-white flex font-serif md:hidden justify-start items-center px-8 py-2 text-5xl md:text-8xl uppercase tracking-wide leading-snug">
+          {/* Lelaine <br /> & Aaron <br /> Are Tying <br /> The Knot
+           */}
+          Lelaine & <br /> Aaron <br /> Are Tying The Knot
         </p>
       </div>
-      <div className="pt-4 ">
+      <div className="pt-4 md:py-12">
         <CovidUpdate />
       </div>
 
       <div className="flex-row px-4 md:grid md:grid-cols-2">
-        <div className="flex flex-col justify-between lg:justify-center">
+        <div className="flex flex-col justify-between lg:justify-start">
+          <LocationDetails
+            textAlign="LEFT"
+            header="Wedding Date"
+            location="Friday, August 20, 2021"
+            details={[]}
+          />
+
           <LocationDetails
             textAlign="LEFT"
             header="Ceremony & Reception"

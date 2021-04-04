@@ -190,7 +190,7 @@ const NavigationBar = ({ showMenu, setShowMenu }) => {
     <>
       <div
         onClick={() => showMenu && setShowMenu(false)}
-        className="flex justify-between pt-6 mx-8"
+        className="flex justify-between mt-14 mx-8"
       >
         <Link
           to="/"

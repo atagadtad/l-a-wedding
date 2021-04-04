@@ -144,7 +144,8 @@ const CovidUpdate = () => {
             We will add more details to the site in the upcoming months so you
             can plan your travel and stay. It will include a wedding block code
             should you choose to stay at the Walper. There are a lot of places
-            to explore around the area, we're excited to share them with you!
+            to explore around the area<span>&#8212;</span>we're excited to share
+            them with you!
           </Text>
         </div>
 

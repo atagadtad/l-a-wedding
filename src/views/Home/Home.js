@@ -157,7 +157,7 @@ const CovidUpdate = () => {
         </div>
         <Text>Lelaine + Aaron</Text>
 
-        <div className="my-4">
+        <div className="mt-10 my-4">
           <Text>
             P.S. In the event that restrictions prevent us from having you all
             at the wedding, we are prepared to livestream the ceremony. We will

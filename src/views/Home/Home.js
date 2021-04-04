@@ -13,12 +13,17 @@ const Home = () => {
   return (
     <div className="container md:mt-12 overscroll-auto bg-green-700">
       <div>
-        <p className="text-white hidden font-serif font-thin md:flex justify-start items-center px-8 py-2 text-6xl md:text-8xl uppercase tracking-wide leading-snug">
+        {/* DESK TOP HEADER */}
+        <p
+          style={{
+            lineHeight: 1.25,
+          }}
+          className="text-white hidden md:flex font-serif px-8 py-2 text-6xl md:text-8xl uppercase tracking-wide leading-loose"
+        >
           Lelaine <br /> & Aaron Are <br /> Tying The Knot
         </p>
+        {/* BELOW is Mobile Header */}
         <p className="text-white flex font-serif md:hidden justify-start items-center px-8 py-2 text-5xl md:text-8xl uppercase tracking-wide leading-snug">
-          {/* Lelaine <br /> & Aaron <br /> Are Tying <br /> The Knot
-           */}
           Lelaine & <br /> Aaron <br /> Are Tying The Knot
         </p>
       </div>
@@ -115,7 +120,7 @@ const LAButton = ({ buttonText, navigatesTo }) => {
 
 const CovidUpdate = () => {
   return (
-    <div className="px-8 ">
+    <div className="px-8">
       <div className="my-4">
         <WhiteDivider />
       </div>
@@ -143,7 +148,9 @@ const CovidUpdate = () => {
             >
               HERE
             </a>{" "}
-            so we can proceed with sending you our invites.
+            so we can proceed with sending you our invites. If you already know
+            that you are unable to attend, in person, please let us know through
+            the link above as well.
           </Text>
         </div>
 
@@ -169,7 +176,8 @@ const CovidUpdate = () => {
           <Text>
             P.S. In the event that restrictions prevent us from having you all
             at the wedding, we are prepared to livestream the ceremony. We will
-            notify you as soon as we can.
+            notify you and send out links as soon as we have all the details
+            together.
           </Text>
         </div>
       </div>

@@ -67,7 +67,7 @@ const Login = () => {
           className="uppercase transition duration-500 ease-in-out border tracking-widest focus:bg-white focus:text-green-700 focus:border-white hover:bg-white hover:text-green-700 hover:border-white focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
         >
           {isLoggingIn ? (
-            <svg class="animate-spin h-5 w-5 mx-3" viewBox="0 0 24 24">
+            <svg className="animate-spin h-5 w-5 mx-3" viewBox="0 0 24 24">
               <circle
                 className="bg-white"
                 stroke="white"

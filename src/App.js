@@ -1,8 +1,4 @@
-import React, {
-  useEffect,
-  useState,
-  // useContext
-} from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -247,6 +243,7 @@ const DesktopMenu = ({ setShowMenu }) => {
               className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
               rel="noreferrer"
               target="_blank"
+              href="/login"
             >
               RSVP
             </a>

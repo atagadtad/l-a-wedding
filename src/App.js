@@ -154,7 +154,7 @@ const Menu = ({ setShowMenu }) => {
       <nav>
         <ul className="h-auto flex items-center bg-green-700">
           <div className="container justify-evenly">
-            <li className="flex my-2 justify-center text-white text-2xl font-serif">
+            <li className="flex my-4 justify-center text-white text-2xl font-serif">
               <Link to="/">Home</Link>
             </li>
             {/* <li
@@ -165,7 +165,7 @@ const Menu = ({ setShowMenu }) => {
             </li> */}
             <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 my-2 flex justify-center focus:text-white text-2xl font-serif"
+              className="text-gray-900 my-4 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/travel-stay">Travel & Stay</Link>
             </li>
@@ -175,6 +175,17 @@ const Menu = ({ setShowMenu }) => {
             >
               <Link to="/rsvp">RSVP</Link>
             </li> */}
+            <li className="my-4 flex justify-center">
+              <a
+                onClick={() => handleAuthClick()}
+                className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+                rel="noreferrer"
+                target="_blank"
+                href="/login"
+              >
+                RSVP
+              </a>
+            </li>
           </div>
         </ul>
       </nav>

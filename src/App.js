@@ -176,15 +176,12 @@ const Menu = ({ setShowMenu }) => {
               <Link to="/rsvp">RSVP</Link>
             </li> */}
             <li className="my-4 flex justify-center">
-              <a
+              <button
                 onClick={() => handleAuthClick()}
                 className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
-                rel="noreferrer"
-                target="_blank"
-                href="/login"
               >
                 RSVP
-              </a>
+              </button>
             </li>
           </div>
         </ul>
@@ -226,7 +223,7 @@ const DesktopMenu = ({ setShowMenu }) => {
         <div className="flex justify-end">
           <li
             onClick={() => setShowMenu(false)}
-            className="mx-4 flex justify-center transition duration-100 ease-in-out text-white hover:text-gray-900 text-2xl font-serif"
+            className="mx-4 inline-flex items-center transition duration-100 ease-in-out text-white hover:text-gray-900 text-2xl font-serif"
           >
             <Link to="/">Home</Link>
           </li>
@@ -238,7 +235,7 @@ const DesktopMenu = ({ setShowMenu }) => {
           </li>  */}
           <li
             onClick={() => setShowMenu(false)}
-            className=" mx-4 text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
+            className="inline-flex items-center mx-4 text-gray-900 justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
           >
             <Link to="/travel-stay">Travel & Stay</Link>
           </li>
@@ -248,16 +245,13 @@ const DesktopMenu = ({ setShowMenu }) => {
           >
             <Link to="/rsvp">RSVP</Link>
           </li> */}
-          <li>
-            <a
+          <li className="inline-block">
+            <button
               onClick={() => handleAuthClick()}
               className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
-              rel="noreferrer"
-              target="_blank"
-              href="/login"
             >
               RSVP
-            </a>
+            </button>
           </li>
         </div>
       </ul>
@@ -269,5 +263,7 @@ const handleAuthClick = () => {
   const session = sessionStorage.getItem("user");
   if (session === "true") {
     window.open("https://server.l-a-wedding.net/form/create", "_blank");
+  } else {
+    window.alert("Please log in first.");
   }
 };

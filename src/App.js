@@ -10,7 +10,7 @@ import {
 // Custom Components
 import Home from "./views/Home/Home";
 // import OurStory from "./views/OurStory/OurStory";
-// import RSVP from "./views/RSVP/RSVP";
+import RSVP from "./views/RSVP/RSVP";
 import TravelStay from "./views/TravelStay/TravelStay";
 import Login from "./views/Login/Login";
 
@@ -112,9 +112,9 @@ export default function App() {
                     <TravelStay />
                   </PrivateRoute>
 
-                  {/* <PrivateRoute path="/rsvp">
+                  <PrivateRoute path="/rsvp">
                     <RSVP />
-                  </PrivateRoute> */}
+                  </PrivateRoute>
                   <PrivateRoute path="/">
                     <Home />
                   </PrivateRoute>
@@ -169,20 +169,20 @@ const Menu = ({ setShowMenu }) => {
             >
               <Link to="/travel-stay">Travel & Stay</Link>
             </li>
-            {/* <li
+            <li
               onClick={() => setShowMenu(false)}
               className="text-gray-900 my-2 flex justify-center focus:text-white text-2xl font-serif"
             >
               <Link to="/rsvp">RSVP</Link>
-            </li> */}
-            <li className="my-4 flex justify-center">
+            </li>
+            {/* <li className="my-4 flex justify-center">
               <button
                 onClick={() => handleAuthClick()}
                 className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
               >
                 RSVP
               </button>
-            </li>
+            </li> */}
           </div>
         </ul>
       </nav>
@@ -239,20 +239,20 @@ const DesktopMenu = ({ setShowMenu }) => {
           >
             <Link to="/travel-stay">Travel & Stay</Link>
           </li>
-          {/* <li
+          <li
             onClick={() => setShowMenu(false)}
             className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
           >
             <Link to="/rsvp">RSVP</Link>
-          </li> */}
-          <li className="inline-block">
+          </li>
+          {/* <li className="inline-block">
             <button
               onClick={() => handleAuthClick()}
               className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
             >
               RSVP
             </button>
-          </li>
+          </li> */}
         </div>
       </ul>
     </nav>

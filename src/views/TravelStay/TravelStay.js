@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Custom Components
 import LocationDetails from "../../components/LocationDetails";
 import WhiteDivider from "../../components/WhiteDivider";
 
 const TravelStay = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const onImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className="container h-auto bg-green-700">
       <div className="pt-16">
@@ -18,6 +24,12 @@ const TravelStay = () => {
               className="object-contain rounded-md shadow-md"
               alt="WALPER"
               src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/walper.jpg"
+              loading="lazy"
+              onLoad={onImageLoad}
+              style={{
+                transition: "opacity 0.3s",
+                opacity: imageLoaded ? 1 : 0,
+              }}
             />
           </div>
 
@@ -47,6 +59,12 @@ const TravelStay = () => {
               className="object-contain rounded-md shadow-md"
               alt="WALPER"
               src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/walper.jpg"
+              loading="lazy"
+              onLoad={onImageLoad}
+              style={{
+                transition: "opacity 0.3s",
+                opacity: imageLoaded ? 1 : 0,
+              }}
             />
           </div>
         </div>

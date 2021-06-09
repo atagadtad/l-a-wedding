@@ -110,21 +110,37 @@ const CovidUpdate = () => {
         <WhiteDivider />
       </div>
 
-      <div className="px-2 py-2">
+      <div className="mx-auto px-2 py-2 max-w-screen-md">
         <div className="mb-4">
           <Text>Dear Friends and Family,</Text>
         </div>
+
+        <div className="my-4">
+          <Text>Our wedding plans have changed!</Text>
+        </div>
+
         <Text>
-          We are so excited to celebrate our wedding with you! We know the last
-          year has been a roller coaster ride but we are believing that God has
-          the best in store.
+          Instead of having you in-person, we would love for you to celebrate
+          our marriage--via livestream! You are invited to witness our wedding
+          online, in the comfort of your own homes and in your best party from
+          home outfits! Please save Friday, August 20th, 2021 on your calendars.
         </Text>
+
         <div className="my-4">
           <Text>
-            We are keeping a close eye on government restrictions here in Canada
-            and also abroad. We will keep you updated via email and this website
-            regarding any changes to our wedding plans. In the meantime, please
-            leave us your mailing address{" "}
+            As much as we wanted to celebrate with everyone in person, we have
+            prayerfully decided to cut down the number of our in-person guests
+            to just 50 people. We thought it best to have a more intimate
+            in-person ceremony taking into account everyone’s varying comfort
+            level with gatherings and to avoid a massive last minute scramble
+            should restrictions change, especially for out-of-town guests.
+          </Text>
+        </div>
+
+        <div className="my-4">
+          <Text>
+            We sincerely hope you are able to join us. To RSVP for our
+            livestream please click{" "}
             <a
               rel="noreferrer"
               target="_blank"
@@ -132,29 +148,22 @@ const CovidUpdate = () => {
               href="https://server.l-a-wedding.net/form/create"
             >
               HERE
-            </a>{" "}
-            so we can proceed with sending you our invites. If you already know
-            that you are unable to attend, in person, please let us know through
-            the link above as well.
+            </a>
+            .
           </Text>
         </div>
 
         <div className="my-4">
           <Text>
-            We will add more details to the site in the upcoming months so you
-            can plan your travel and stay. It will include a wedding block code
-            should you choose to stay at the Walper. There are a lot of places
-            to explore around the area<span>&#8212;</span>we're excited to share
-            them with you!
+            We would like to thank all of you for your well wishes and prayers
+            during this time. You have all played a part in our lives and our
+            relationship and it would mean the world to us to share this
+            important milestone with you.
           </Text>
         </div>
 
-        <Text>
-          Please continue to join us in prayer that we may be able to celebrate
-          with you all in person in August! Be well!
-        </Text>
-        <div className="mt-4 mb-2">
-          <Text>Love,</Text>
+        <div className="mt-6 mb-4">
+          <Text>We love you all! Be well!</Text>
         </div>
         <Text>Lelaine + Aaron</Text>
 

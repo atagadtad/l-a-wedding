@@ -154,7 +154,10 @@ const Menu = ({ setShowMenu }) => {
       <nav>
         <ul className="h-auto flex items-center bg-green-700">
           <div className="container justify-evenly">
-            <li className="flex my-4 justify-center text-white text-2xl font-serif">
+            <li
+              onClick={() => setShowMenu(false)}
+              className="flex my-4 justify-center text-white text-2xl font-serif"
+            >
               <Link to="/">Home</Link>
             </li>
             {/* <li
@@ -169,12 +172,14 @@ const Menu = ({ setShowMenu }) => {
             >
               <Link to="/travel-stay">Travel & Stay</Link>
             </li>
-            <li
-              onClick={() => setShowMenu(false)}
-              className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
-            >
-              <Link to="/rsvp">RSVP</Link>
-            </li>
+            <Link to="/rsvp">
+              <li
+                onClick={() => setShowMenu(false)}
+                className="w-24 text-center mx-auto border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+              >
+                RSVP
+              </li>
+            </Link>
             {/* <li className="my-4 flex justify-center">
               <button
                 onClick={() => handleAuthClick()}

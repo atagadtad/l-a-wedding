@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Text from "../../components/Text";
 
 const RSVP = () => {
-  const [showForm, setShowForm] = useState(false);
+  // const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="h-auto  bg-green-700">
@@ -66,6 +66,9 @@ const RSVP = () => {
   );
 };
 
+export default RSVP;
+
+/*
 const RSVPForm = ({ showForm, setShowForm }) => {
   return (
     <div class="fixed z-10 inset-0 overflow-y-auto">
@@ -204,5 +207,4 @@ const CloseFormButton = ({ showForm, setShowForm }) => {
     </button>
   );
 };
-
-export default RSVP;
+*/

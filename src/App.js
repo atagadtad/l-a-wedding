@@ -266,11 +266,11 @@ const DesktopMenu = ({ setShowMenu }) => {
   );
 };
 
-const handleAuthClick = () => {
-  const session = sessionStorage.getItem("user");
-  if (session === "true") {
-    window.open("https://server.l-a-wedding.net/form/create", "_blank");
-  } else {
-    window.alert("Please log in first.");
-  }
-};
+// const handleAuthClick = () => {
+//   const session = sessionStorage.getItem("user");
+//   if (session === "true") {
+//     window.open("https://server.l-a-wedding.net/form/create", "_blank");
+//   } else {
+//     window.alert("Please log in first.");
+//   }
+// };

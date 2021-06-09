@@ -239,12 +239,14 @@ const DesktopMenu = ({ setShowMenu }) => {
           >
             <Link to="/travel-stay">Travel & Stay</Link>
           </li>
-          <li
-            onClick={() => setShowMenu(false)}
-            className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
-          >
-            <Link to="/rsvp">RSVP</Link>
-          </li>
+          <Link to="/rsvp">
+            <li
+              onClick={() => setShowMenu(false)}
+              className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
+            >
+              RSVP
+            </li>
+          </Link>
           {/* <li className="inline-block">
             <button
               onClick={() => handleAuthClick()}

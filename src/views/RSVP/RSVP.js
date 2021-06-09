@@ -1,32 +1,67 @@
 import React, { useState } from "react";
+import Text from "../../components/Text";
 
 const RSVP = () => {
   const [showForm, setShowForm] = useState(false);
 
   return (
     <div className="h-auto  bg-green-700">
-      <div className="pt-16 h-full flex items-center">
-        <div className="w-screen mb-40">
-          <h1 className="text-white flex justify-start px-4 py-2 text-6xl font-serif">
-            RSVP
+      <div className="pt-16 px-2 h-full flex items-center">
+        <div className=" max-w-screen-md mx-auto mb-40">
+          <h1 className="text-white flex justify-start px-6 py-2 text-6xl font-serif">
+            Gifts:
           </h1>
-          <div className="px-4 mb-6">
-            <p className="text-xl text-gray-100 font-serif">
-              We look forward to celebrating with you! <br />
-              Confirm with the button.
-            </p>
+          <div className="px-6 my-6 ">
+            <Text>
+              If nothing else, we are most grateful for your presence at our
+              wedding!{" "}
+            </Text>
+
+            <div className="my-4">
+              <Text>
+                If you did want to give us something to help us on our way, we
+                would greatly appreciate a financial gift. It will definitely
+                help us as we save up for our after-the-pandemic honeymoon but
+                will most likely go towards our future home.
+              </Text>
+            </div>
+
+            <div className="my-4">
+              <Text>
+                We also have a small gift registry{" "}
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  className="underline font-bold transition hover:text-gray-900"
+                  href="https://registry.thebay.com/registry/view-registry/lelaine_aaron_wedding"
+                >
+                  HERE
+                </a>{" "}
+                for those who may not be able to send money or are more
+                comfortable sending us a gift this way.
+              </Text>
+            </div>
+
+            <div className="my-4">
+              <Text>
+                For those who are considering a financial gift, please send us
+                your gift via e-transfer to lelaineaaron@gmail.com. If you
+                prefer another method please let us know (via the same email)!
+              </Text>
+            </div>
           </div>
+
           <div className="px-4 py-2">
-            <button
+            {/* <button
               onClick={() => setShowForm(!showForm)}
               className="uppercase border transition duration-500 ease-in-out hover:bg-white hover:text-green-700 hover:border-gray-300 hover:font-extrabold focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
             >
               I'll be there!
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
-      {showForm && <RSVPForm showForm={showForm} setShowForm={setShowForm} />}
+      {/* {showForm && <RSVPForm showForm={showForm} setShowForm={setShowForm} />} */}
     </div>
   );
 };

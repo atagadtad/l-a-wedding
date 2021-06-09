@@ -171,7 +171,7 @@ const Menu = ({ setShowMenu }) => {
             </li>
             <li
               onClick={() => setShowMenu(false)}
-              className="text-gray-900 my-2 flex justify-center focus:text-white text-2xl font-serif"
+              className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
             >
               <Link to="/rsvp">RSVP</Link>
             </li>
@@ -241,7 +241,7 @@ const DesktopMenu = ({ setShowMenu }) => {
           </li>
           <li
             onClick={() => setShowMenu(false)}
-            className="text-gray-900 flex justify-center transition duration-100 ease-in-out hover:text-white  text-2xl font-serif"
+            className="border transition duration-500 ease-in-out hover:bg-white tracking-wide  hover:text-green-700 hover:border-white  focus:outline-none text-lg font-thin font-serif text-white py-3 px-5 border-solid border-white"
           >
             <Link to="/rsvp">RSVP</Link>
           </li>

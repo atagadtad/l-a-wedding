@@ -166,15 +166,6 @@ const CovidUpdate = () => {
           <Text>We love you all! Be well!</Text>
         </div>
         <Text>Lelaine + Aaron</Text>
-
-        <div className="mt-10 my-4">
-          <Text>
-            P.S. In the event that restrictions prevent us from having you all
-            at the wedding, we are prepared to livestream the ceremony. We will
-            notify you and send out links as soon as we have all the details
-            together.
-          </Text>
-        </div>
       </div>
 
       <div className="my-4">

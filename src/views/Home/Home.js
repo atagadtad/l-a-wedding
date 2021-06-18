@@ -3,7 +3,7 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import LocationDetails from "../../components/LocationDetails";
 
 // Custom Components
-import Text from "../../components/Text";
+// import Text from "../../components/Text";
 import WhiteDivider from "../../components/WhiteDivider";
 
 const Home = () => {
@@ -26,9 +26,13 @@ const Home = () => {
           Lelaine & <br /> Aaron <br /> Are Tying The Knot
         </p>
       </div>
-      <div className="pt-4 md:py-12">
-        <CovidUpdate />
+
+      <div className="my-4">
+        <WhiteDivider />
       </div>
+      {/* <div className="pt-4 md:py-12">
+        <CovidUpdate />
+      </div> */}
 
       <div className="flex-row px-4 md:grid md:grid-cols-2">
         <div className="flex flex-col justify-between lg:justify-start">
@@ -103,6 +107,7 @@ const handleWidth = () => {
   return result;
 };
 
+/*
 const CovidUpdate = () => {
   return (
     <div className="px-8">
@@ -174,3 +179,4 @@ const CovidUpdate = () => {
     </div>
   );
 };
+*/

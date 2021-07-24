@@ -82,7 +82,7 @@ const TravelStay = () => {
             rel="noreferrer"
             target="_blank"
             className="px-4 pt-6 block underline  font-serif text-2xl uppercase text-white transition hover:text-gray-900"
-            href="https://www.walper.com/"
+            href="https://reservations.travelclick.com/10242?groupID=3167323"
           >
             The Walper Hotel
           </a>
@@ -90,9 +90,11 @@ const TravelStay = () => {
 
         <div class="my-8 px-4 flex w-full justify-center">
           <p className="font-serif text-center text-white">
-            Booking code for the Walper available, please let us know if you'd
-            like it in advance. We will post it in May once we've sent the
-            invites.
+            The link above is direct link to reserving a room with our booking
+            code. <br /> To book by phone please call:{" "}
+            <a href="tel:519-745-4321">519-745-4321</a>
+            <br />
+            If asked the wedding block code is: <strong>LELAARON21</strong>.
           </p>
         </div>
 

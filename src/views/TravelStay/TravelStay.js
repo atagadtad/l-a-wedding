@@ -50,19 +50,38 @@ const TravelStay = () => {
               details={["20 Queen St South", "Kitchener, ON"]}
             />
 
+            <div className="flex-col w-full m-4">
+              <div className="flex justify-center">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  className="px-4 block underline justify-end  font-serif text-lg text-white transition hover:text-gray-900"
+                  href="https://www.walper.com/faq"
+                >
+                  Walper FAQ
+                </a>
+              </div>
+            </div>
+
             <LocationDetails
               link={"https://goo.gl/maps/YnTfrXVbdbsdS2y89"}
-              linkText={"Parking"}
+              linkText={"Parking - Charles and Benton Garage"}
               showWalperLink={false}
               textAlign="text-center"
               flexAlign="justify-center"
               lowercaseHeader={true}
-              details={[
-                "4 Charles St East",
-                "Kitchener, ON",
-                "Park on the north west end",
-              ]}
+              details={["4 Charles St East", "Kitchener, ON"]}
             />
+
+            <div className="flex-col w-full m-4">
+              <div className="flex justify-center">
+                <p className="font-serif text-center text-white">
+                  Park on the north west end <br /> Please note: downtown
+                  Kitchener parking lots <br /> are{" "}
+                  <em> free after 5pm, and free Saturdays and Sundays </em>
+                </p>
+              </div>
+            </div>
 
             <div className="flex-col w-full">
               <div className="flex justify-center">

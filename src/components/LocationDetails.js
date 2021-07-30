@@ -5,6 +5,7 @@ const LocationDetails = ({
   location,
   details,
   textAlign,
+  flexAlign,
   link,
   linkText,
   lowercaseHeader,
@@ -12,9 +13,7 @@ const LocationDetails = ({
   const mapDetails = details.map((string, index) => (
     <p
       key={index}
-      className={`${
-        textAlign && textAlign === "LEFT" ? "text-left" : "text-right"
-      }
+      className={`${textAlign}
     text-white  tracking-wide px-4 text-xl font-serif`}
     >
       {string}
@@ -23,27 +22,18 @@ const LocationDetails = ({
 
   return (
     <div className="flex-col w-full">
-      <div
-        className={`flex ${
-          textAlign && textAlign === "LEFT" ? "justify-start" : "justify-end"
-        }`}
-      >
+      <div className={`flex ${flexAlign}`}>
         {header && (
           <h1
             className={`text-xl tracking-wider font-serif  ${
-              (lowercaseHeader ? "" : "uppercase",
-              textAlign && textAlign === "RIGHT" ? "text-right" : "")
+              (lowercaseHeader ? "" : "uppercase", textAlign)
             } px-4 pt-12`}
           >
             {header}
           </h1>
         )}
       </div>
-      <div
-        className={`flex ${
-          textAlign && textAlign === "LEFT" ? "justify-start" : "justify-end"
-        }`}
-      >
+      <div className={`flex ${flexAlign}`}>
         <h1
           className={`${
             !location && "hidden"

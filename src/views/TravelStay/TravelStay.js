@@ -18,8 +18,8 @@ const TravelStay = () => {
           {"Travel & Stay"}
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 my-12">
-          <div className="mx-6 lg:hidden">
+        <div className="grid grid-cols-1 gap-12 my-12">
+          <div className="mx-auto">
             <img
               className="object-contain rounded-md shadow-md"
               alt="WALPER"
@@ -27,6 +27,7 @@ const TravelStay = () => {
               loading="lazy"
               onLoad={onImageLoad}
               style={{
+                width: "40rem",
                 transition: "opacity 0.3s",
                 opacity: imageLoaded ? 1 : 0,
               }}
@@ -36,36 +37,45 @@ const TravelStay = () => {
           <div className="flex flex-col mx-6 items-center">
             <div className="w-full flex justify-end"></div>
 
+            <h3 className="text-white text-center mt-16 flex justify-center items-center px-4 py-2 text-5xl font-serif">
+              Ceremony & Reception
+            </h3>
+
             <LocationDetails
               link={"https://www.walper.com/"}
               linkText={"The Walper Hotel"}
-              textAlign="RIGHT"
-              header="Ceremony & Reception"
+              textAlign="text-center"
+              flexAlign="justify-center"
+              // header="Ceremony & Reception"
               details={["20 Queen St South", "Kitchener, ON"]}
             />
 
             <LocationDetails
-              link={"https://goo.gl/maps/eSwmMfVSiwJY8eaA8"}
+              link={"https://goo.gl/maps/YnTfrXVbdbsdS2y89"}
               linkText={"Parking"}
               showWalperLink={false}
-              textAlign="RIGHT"
+              textAlign="text-center"
+              flexAlign="justify-center"
               lowercaseHeader={true}
-              details={["4 Charles St East", "Kitchener, ON"]}
+              details={[
+                "4 Charles St East",
+                "Kitchener, ON",
+                "Park on the north west end",
+              ]}
             />
-          </div>
 
-          <div className="mx-6 hidden lg:block">
-            <img
-              className="object-contain rounded-md shadow-md"
-              alt="WALPER"
-              src="https://l-a-wedding.s3.ca-central-1.amazonaws.com/walper.jpg"
-              loading="lazy"
-              onLoad={onImageLoad}
-              style={{
-                transition: "opacity 0.3s",
-                opacity: imageLoaded ? 1 : 0,
-              }}
-            />
+            <div className="flex-col w-full">
+              <div className="flex justify-center">
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  className="px-4 block underline justify-end  font-serif text-lg text-white transition hover:text-gray-900"
+                  href="https://goo.gl/maps/eSwmMfVSiwJY8eaA"
+                >
+                  Route to Walper from Parking
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -90,11 +100,11 @@ const TravelStay = () => {
 
         <div class="my-8 px-4 flex w-full justify-center">
           <p className="font-serif text-center text-white">
-            The link above is direct link to reserving a room with our booking
-            code. <br /> To book by phone please call:{" "}
+            Click on the link above to reserve a room with our booking code.{" "}
+            <br /> To book by phone please call:{" "}
             <a href="tel:519-745-4321">519-745-4321</a>
             <br />
-            If asked the wedding block code is: <strong>LELAARON21</strong>.
+            Wedding block code is: <strong>LELAARON21</strong>.
           </p>
         </div>
 

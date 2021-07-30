@@ -127,6 +127,12 @@ const TravelStay = () => {
           </p>
         </div>
 
+        <div class="my-8 px-4 flex w-full justify-center">
+          <p className="font-serif text-lg text-center text-white">
+            <em>Booking cutoff date is Friday, August 6th</em>
+          </p>
+        </div>
+
         <div className="mt-4 flex justify-center">
           <a
             rel="noreferrer"

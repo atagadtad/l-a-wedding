@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import LocationDetails from "../../components/LocationDetails";
+import "./Home.css";
 
 // Custom Components
 // import Text from "../../components/Text";
@@ -31,19 +32,19 @@ const Home = () => {
         <WhiteDivider />
       </div>
 
-      <div className="flex justify-center">
-        <div className="my-14">
-          <iframe
-            width="660"
-            height="415"
-            src="https://www.youtube.com/embed/3qagWj7Ck88"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+      {/* <div className="flex justify-center"> */}
+      <div className="video-container">
+        <iframe
+          width="660"
+          height="415"
+          src="https://www.youtube.com/embed/3qagWj7Ck88"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
+      {/* </div> */}
 
       <div className="my-4">
         <WhiteDivider />

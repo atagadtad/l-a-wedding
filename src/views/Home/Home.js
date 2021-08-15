@@ -31,6 +31,24 @@ const Home = () => {
         <WhiteDivider />
       </div>
 
+      <div className="flex justify-center">
+        <div className="my-14">
+          <iframe
+            width="660"
+            height="415"
+            src="https://www.youtube.com/embed/3qagWj7Ck88"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+
+      <div className="my-4">
+        <WhiteDivider />
+      </div>
+
       <div className="flex-row px-4 md:grid md:grid-cols-2">
         <div className="flex flex-col justify-between lg:justify-start">
           <LocationDetails

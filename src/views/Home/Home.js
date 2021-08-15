@@ -28,7 +28,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="my-4">
+      <div className="px-8 my-4">
         <WhiteDivider />
       </div>
 
@@ -46,7 +46,7 @@ const Home = () => {
       </div>
       {/* </div> */}
 
-      <div className="my-4">
+      <div className="px-8 my-4">
         <WhiteDivider />
       </div>
 
